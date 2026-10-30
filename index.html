@@ -9,119 +9,172 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..100,500..900&display=swap">
 <style>
-:root { --bg:#F4F6FA; --panel:#FFFFFF; --fg:#0A1530; --muted:#48546C; --line:#D7DFEE; --navy:#0A3161; --navy2:#071D45; --gold:#FFC93C; --box:#EEF2F8; --link:#1E4FA0; color-scheme: light; }
-@media (prefers-color-scheme: dark) { :root { --bg:#0B1222; --panel:#121B30; --fg:#E7ECF5; --muted:#A3AEC4; --line:#26324D; --box:#0E1628; --link:#A9C6FF; color-scheme: dark; } }
+:root { --bg:#F4F6FA; --panel:#FFFFFF; --fg:#0A1530; --muted:#48546C; --line:#D7DFEE; --navy:#0A3161; --navy2:#071D45; --gold:#FFC93C; --box:#EEF2F8; --link:#1E4FA0;
+  --pinbg:#FFF4D6; --pinfg:#7A5200; --salebg:#FFE6D6; --salefg:#8A3200; --multibg:#DCEBFF; --multifg:#0A3161; --ok:#1F7A4D; --okbg:#E3F7EA; color-scheme: light; }
+@media (prefers-color-scheme: dark) { :root { --bg:#0B1222; --panel:#121B30; --fg:#E7ECF5; --muted:#A3AEC4; --line:#26324D; --box:#0E1628; --link:#A9C6FF;
+  --pinbg:#3A2E0B; --pinfg:#FFD978; --salebg:#3B1F10; --salefg:#FFB98A; --multibg:#16305A; --multifg:#CFE0FF; --ok:#5BD08F; --okbg:#10301F; color-scheme: dark; } }
 * { box-sizing: border-box; }
+[hidden] { display:none !important; }
+html { scroll-behavior:smooth; scroll-padding-top:70px; }
 body { margin:0; background:var(--bg); color:var(--fg); font:500 16px/1.6 "Archivo", system-ui, sans-serif; }
+.wrap { max-width:1120px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left)); padding-right:max(16px, env(safe-area-inset-right)); }
 .hero { background:var(--navy); color:#fff; }
-.wrap { max-width:1080px; margin:0 auto; padding-left:max(16px, env(safe-area-inset-left)); padding-right:max(16px, env(safe-area-inset-right)); }
-.hero .wrap { padding-block:36px 40px; display:grid; gap:14px; }
+.hero .wrap { padding-block:30px 30px; display:grid; gap:12px; }
 .brand { display:flex; align-items:center; gap:10px; font:900 26px/1 "Archivo"; font-stretch:81%; }
 .brand img { width:40px; height:40px; border-radius:10px; }
 .brand i { font-style:normal; color:var(--gold); }
-h1 { margin:6px 0 0; font:900 clamp(34px,6vw,56px)/1 "Archivo"; font-stretch:62%; text-transform:uppercase; }
-.hero p { margin:0; max-width:64ch; color:#D6E0F5; }
-.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:8px; }
-.btn { display:inline-flex; align-items:center; gap:8px; padding:13px 20px; border-radius:10px; font:900 17px/1 "Archivo"; font-stretch:70%; text-transform:uppercase; text-decoration:none; }
+h1 { margin:4px 0 0; font:900 clamp(34px,6vw,54px)/1 "Archivo"; font-stretch:62%; text-transform:uppercase; }
+.hero p { margin:0; max-width:66ch; color:#D6E0F5; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:6px; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:13px 20px; border-radius:10px; font:900 17px/1 "Archivo"; font-stretch:70%; text-transform:uppercase; text-decoration:none; background:var(--navy); color:#fff; border:0; cursor:pointer; }
 .btn.gold { background:var(--gold); color:#0A1F44; box-shadow:0 4px 0 #B8860B; }
-.btn.ghost { border:2px solid #A9C6FF; color:#fff; }
-.btn:focus-visible, a:focus-visible, button:focus-visible { outline:3px solid #A9C6FF; outline-offset:2px; }
-.steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,220px),1fr)); gap:10px; margin-top:12px; }
-.steps div { background:var(--navy2); border-radius:10px; padding:12px 14px; font-size:14px; color:#D6E0F5; }
-.steps b { color:#fff; display:block; font-size:15px; }
-main .wrap { padding-block:28px 64px; display:grid; gap:28px; }
-section.card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px; min-width:0; }
-h2 { font:900 28px/1.05 "Archivo"; font-stretch:66%; text-transform:uppercase; margin:28px 0 10px; }
-section.card > h2:first-child { margin-top:0; }
-h3 { font:800 19px/1.25 "Archivo"; margin:26px 0 8px; }
-.gallery { display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%,200px),1fr)); gap:14px; }
-.gallery figure { margin:0; background:var(--box); border-radius:12px; padding:10px; display:grid; gap:8px; align-content:start; }
-.gallery figure.wide { grid-column:1 / -1; }
-.gallery img { width:100%; border-radius:8px; display:block; background:#fff; }
-.gallery figcaption { display:flex; justify-content:space-between; gap:8px; font-size:13px; align-items:baseline; }
-.gallery figcaption a { font-weight:800; color:var(--link); white-space:nowrap; }
-.toc { display:flex; flex-wrap:wrap; gap:8px; }
-.toc a { background:var(--box); color:var(--fg); text-decoration:none; padding:6px 10px; border-radius:7px; font-size:14px; font-weight:700; }
-.doc { min-width:0; }
-.doc table { border-collapse:collapse; width:100%; font-size:14.5px; display:block; overflow-x:auto; }
-.doc th, .doc td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
-.doc th { background:var(--box); }
-.doc code { background:var(--box); padding:1px 5px; border-radius:5px; font-size:.92em; overflow-wrap:anywhere; }
-.doc a { color:var(--link); }
-.box { position:relative; margin:8px 0 14px; }
-.box pre { margin:0; background:var(--box); border:1px solid var(--line); border-radius:10px; padding:14px 16px; padding-right:84px; white-space:pre-wrap; overflow-wrap:anywhere; font:500 14.5px/1.55 ui-monospace, Menlo, Consolas, monospace; }
+.btn.ghost { background:transparent; border:2px solid #A9C6FF; color:#fff; }
+.btn.small { padding:10px 14px; font-size:15px; }
+a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline:3px solid #6E9BE8; outline-offset:2px; }
+.prog { display:flex; align-items:center; gap:12px; font-weight:800; color:#fff; }
+.prog .bar { flex:1; max-width:340px; height:10px; background:var(--navy2); border-radius:6px; overflow:hidden; }
+.prog .bar i { display:block; height:100%; width:0; background:var(--gold); transition:width .3s; }
+.prog button { background:none; border:0; color:#A9C6FF; font:700 13px "Archivo"; cursor:pointer; text-decoration:underline; }
+nav.steps { position:sticky; top:0; z-index:5; background:var(--panel); border-bottom:1px solid var(--line); }
+nav.steps .wrap { display:flex; gap:6px; overflow-x:auto; padding-block:10px; scrollbar-width:thin; }
+nav.steps a { flex:none; text-decoration:none; color:var(--fg); background:var(--box); padding:7px 12px; border-radius:999px; font-size:14px; font-weight:800; white-space:nowrap; }
+nav.steps a.done { background:var(--okbg); color:var(--ok); }
+nav.steps a.done::before { content:"✓ "; }
+main .wrap { padding-block:24px 72px; display:grid; gap:22px; }
+section.step { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px; min-width:0; }
+.shead { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:6px; }
+.snum { width:44px; height:44px; border-radius:50%; background:var(--navy); color:#fff; display:grid; place-items:center; font:900 22px/1 "Archivo"; font-stretch:70%; flex:none; }
+.step.isdone .snum { background:var(--ok); }
+h2 { font:900 30px/1.05 "Archivo"; font-stretch:66%; text-transform:uppercase; margin:0; flex:1; min-width:200px; }
+.stepdone { margin-left:auto; }
+h3 { font:800 19px/1.25 "Archivo"; margin:24px 0 8px; }
+.doc a, .step a:not(.btn) { color:var(--link); }
+.step table { border-collapse:collapse; width:100%; font-size:14.5px; display:block; overflow-x:auto; }
+.step th, .step td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+.step th { background:var(--box); }
+code { background:var(--box); padding:1px 5px; border-radius:5px; font-size:.92em; overflow-wrap:anywhere; }
+hr { border:0; border-top:1px solid var(--line); margin:22px 0; }
+.box { margin:8px 0 14px; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:var(--box); }
+.boxbar { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:7px 8px 7px 14px; border-bottom:1px solid var(--line); font-size:12.5px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+.box pre { margin:0; padding:14px 16px; white-space:pre-wrap; overflow-wrap:anywhere; font:500 14.5px/1.55 ui-monospace, Menlo, Consolas, monospace; max-height:none; }
 .box pre code { background:none; padding:0; }
-.copy { position:absolute; top:8px; right:8px; border:0; background:var(--navy); color:#fff; font:800 13px/1 "Archivo"; padding:8px 11px; border-radius:7px; cursor:pointer; }
-.copy.done { background:#1F7A4D; }
-.doc hr { border:0; border-top:1px solid var(--line); margin:22px 0; }
-.note { font-size:14px; color:var(--muted); }
+.copy { flex:none; border:0; background:var(--navy); color:#fff; font:800 13px/1 "Archivo"; padding:9px 12px; border-radius:8px; cursor:pointer; text-transform:none; letter-spacing:0; }
+.copy.big { font-size:15px; padding:11px 16px; background:var(--gold); color:#0A1F44; }
+.copy.done { background:var(--ok) !important; color:#fff !important; }
+.note { font-size:14.5px; color:var(--muted); }
+.ck { display:flex; gap:10px; align-items:flex-start; padding:8px 10px; border-radius:8px; cursor:pointer; font-size:15px; }
+.ck:hover { background:var(--box); }
+.ck input { width:20px; height:20px; margin:2px 0 0; accent-color:var(--ok); flex:none; }
+.ck input:checked + span { color:var(--muted); text-decoration:line-through; }
+/* step 3 images */
+.ics { display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,230px),1fr)); gap:14px; margin:12px 0 6px; }
+.ic { margin:0; background:var(--box); border-radius:12px; padding:10px; display:grid; gap:8px; align-content:start; }
+.ic img { width:100%; border-radius:8px; display:block; background:#fff; aspect-ratio:auto; }
+.ic figcaption { display:grid; gap:6px; font-size:14px; }
+.ic figcaption span { color:var(--muted); }
+/* posts */
+.how { list-style:none; padding:0; margin:14px 0; display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%,190px),1fr)); gap:10px; counter-reset:h; }
+.how li { background:var(--box); border-radius:12px; padding:12px 14px 12px 50px; position:relative; font-size:14px; color:var(--muted); counter-increment:h; }
+.how li::before { content:counter(h); position:absolute; left:12px; top:12px; width:28px; height:28px; border-radius:50%; background:var(--navy); color:#fff; display:grid; place-items:center; font:900 15px/1 "Archivo"; }
+.how li > b:first-child { display:block; color:var(--fg); font-size:15px; }
+.legend { display:flex; flex-wrap:wrap; align-items:center; gap:8px 6px; font-size:14px; color:var(--muted); margin:6px 0 10px; }
+.bdg { display:inline-block; font:800 12.5px/1 "Archivo"; padding:6px 9px; border-radius:6px; background:var(--box); color:var(--fg); font-style:normal; white-space:nowrap; text-transform:uppercase; letter-spacing:.04em; }
+.bdg.multi { background:var(--multibg); color:var(--multifg); }
+.bdg.pin { background:var(--pinbg); color:var(--pinfg); }
+.bdg.sale { background:var(--salebg); color:var(--salefg); }
+.bdg.today { background:var(--gold); color:#0A1F44; }
+.bdg.late { background:#C62828; color:#fff; }
+.ovd { margin:12px 0 8px; }
+.ovd summary { font-weight:800; cursor:pointer; padding:6px 0; }
+.ov { list-style:none; margin:6px 0 0; padding:0; display:grid; gap:6px; }
+.ov a { display:grid; grid-template-columns:auto 205px 1fr auto; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; background:var(--box); text-decoration:none; color:var(--fg) !important; font-size:14.5px; }
+.ov a:hover { outline:2px solid var(--line); }
+.ov .ovw { font-weight:800; }
+.ov .ovb { display:flex; gap:4px; flex-wrap:wrap; justify-content:flex-end; }
+.ov li.done a { opacity:.55; }
+.ov li.done .ovt::after { content:" ✓"; color:var(--ok); font-weight:900; }
+.pid { display:grid; place-items:center; min-width:52px; height:52px; padding:0 8px; border-radius:12px; background:var(--navy); color:#fff; font:900 24px/1 "Archivo"; font-stretch:70%; }
+.pid.sm { min-width:38px; height:30px; font-size:16px; border-radius:7px; }
+.dayh { font:900 22px/1 "Archivo"; font-stretch:70%; text-transform:uppercase; margin:30px 0 10px; padding-bottom:8px; border-bottom:2px solid var(--line); }
+.post { border:1px solid var(--line); border-radius:14px; padding:16px; margin:12px 0 18px; background:var(--panel); scroll-margin-top:70px; }
+.post.isdone { border-color:var(--ok); }
+.post.isdone .pid { background:var(--ok); }
+.phead { display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:start; }
+.ptitle h3 { margin:2px 0 8px; font-size:20px; }
+.badges { display:flex; flex-wrap:wrap; gap:6px; }
+.ptime { text-align:right; display:grid; gap:2px; font-size:14px; color:var(--muted); }
+.ptime b { font:900 26px/1 "Archivo"; font-stretch:70%; color:var(--fg); }
+.ptime .local { font-size:12.5px; }
+.callout.pin { margin:12px 0 0; background:var(--pinbg); color:var(--pinfg); padding:10px 12px; border-radius:10px; font-weight:700; font-size:14.5px; }
+.pbody { display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:18px; margin-top:14px; }
+.media { display:grid; gap:10px; align-content:start; }
+.media .single img { width:100%; max-width:340px; border-radius:10px; display:block; border:1px solid var(--line); }
+.mlabel { margin:0; font-size:14.5px; }
+.strip { list-style:none; margin:0; padding:6px 0 0 6px; display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:8px; }
+.strip li { display:grid; gap:4px; }
+.strip li > a:first-child { position:relative; display:block; }
+.strip img { width:100%; border-radius:8px; display:block; border:1px solid var(--line); }
+.strip .num { position:absolute; top:-6px; left:-6px; width:26px; height:26px; border-radius:50%; background:var(--gold); color:#0A1F44; display:grid; place-items:center; font:900 14px/1 "Archivo"; box-shadow:0 1px 3px rgba(0,0,0,.3); }
+.strip .dl { font-size:12.5px; font-weight:800; text-align:center; }
+.hint { margin:0; font-size:13.5px; color:var(--muted); }
+.fname { margin:0; font-size:13px; }
+.capcol { min-width:0; }
+.box.cap { margin-top:0; }
+.box.cap .boxbar { background:var(--panel); }
+.pt { margin:4px 0 10px; } .pt summary { cursor:pointer; font-weight:800; font-size:14.5px; padding:4px 0; }
+.box.mini pre { font-size:13.5px; padding:10px 12px; }
+.checks { display:grid; gap:2px; border-top:1px solid var(--line); padding-top:8px; }
+.doc-notes { margin-top:20px; border-top:1px solid var(--line); }
+details.more { margin-top:10px; } details.more summary { cursor:pointer; font-weight:800; }
+@media (max-width:760px) {
+  .pbody { grid-template-columns:1fr; }
+  .phead { grid-template-columns:auto 1fr; }
+  .ptime { grid-column:1 / -1; text-align:left; display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline; }
+  .ov a { grid-template-columns:auto 1fr; } .ov .ovt { grid-column:1 / -1; } .ov .ovb { grid-column:1 / -1; justify-content:flex-start; }
+  section.step { padding:16px; }
+}
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
   <div class="brand"><img src="favicon.svg" alt=""><span>Odds<i>Boss</i></span></div>
   <h1>Facebook Page setup kit</h1>
-  <p>Everything you need to set up the OddsBoss Facebook Page so ads can run: the logo, the cover photos, 10 posts with their captions and schedule, and step-by-step instructions. Work through the steps below in order.</p>
+  <p>Set up the OddsBoss Facebook Page so ads can run. Go through the 7 steps in order. Every image is on this page with a Download button, and every text has a Copy button. Tick the boxes as you go.</p>
   <div class="actions">
-    <a class="btn gold" href="oddsboss-page-kit.zip" download>Download the full kit (7.7 MB)</a>
-    <a class="btn ghost" href="review.html">See the Page preview</a>
+    <a class="btn gold" href="oddsboss-page-kit.zip" download>Download everything (7.7 MB)</a>
+    <a class="btn ghost" href="review.html">Preview the finished Page</a>
   </div>
-  <div class="steps">
-    <div><b>1. Download the kit</b>The zip has every image, these instructions (README.md) and the preview page.</div>
-    <div><b>2. Set up the Page</b>Sections 1 to 3: create it, fill in the details, upload the logo and cover.</div>
-    <div><b>3. Schedule the posts</b>Sections 4 to 6: post P1 and P2 today and pin P2.</div>
-    <div><b>4. Connect and check</b>Section 7, then section 8 on Sun Nov 1. Ask the owner about section 10.</div>
-  </div>
+  <div class="prog" aria-live="polite"><span id="progtxt">0 of 0 done</span><span class="bar"><i id="progbar"></i></span><button type="button" id="reset">Reset ticks</button></div>
 </div></header>
+<nav class="steps" aria-label="Steps"><div class="wrap"><a href="#start" data-nav="start">Start</a><a href="#step1" data-nav="step1">1. Create the Page</a><a href="#step2" data-nav="step2">2. Page details</a><a href="#step3" data-nav="step3">3. Profile picture</a><a href="#step4" data-nav="step4">4. posts</a><a href="#step5" data-nav="step5">5. Connect the Page</a><a href="#step6" data-nav="step6">6. Sun Nov 1</a><a href="#step7" data-nav="step7">7. Comments</a><a href="#owner" data-nav="owner">Owner to-do</a></div></nav>
 <main><div class="wrap">
-  <section class="card"><h2>Images</h2><p class="note">Click any image or "Download" to save it. Upload the PNG files to Facebook exactly as named.</p><div class="gallery"><figure class=""><a href="assets/profile-A.png" download><img src="assets/profile-A.png" alt="Profile picture (use this)" loading="lazy"></a><figcaption><span>Profile picture (use this)</span><a href="assets/profile-A.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/profile-B.png" download><img src="assets/profile-B.png" alt="Profile picture (backup)" loading="lazy"></a><figcaption><span>Profile picture (backup)</span><a href="assets/profile-B.png" download>Download</a></figcaption></figure>
-<figure class="wide"><a href="assets/cover-halloween.png" download><img src="assets/cover-halloween.png" alt="Cover: now until Oct 31" loading="lazy"></a><figcaption><span>Cover: now until Oct 31</span><a href="assets/cover-halloween.png" download>Download</a></figcaption></figure>
-<figure class="wide"><a href="assets/cover-evergreen.png" download><img src="assets/cover-evergreen.png" alt="Cover: from Sun Nov 1" loading="lazy"></a><figcaption><span>Cover: from Sun Nov 1</span><a href="assets/cover-evergreen.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P1-arbitrage.png" download><img src="assets/P1-arbitrage.png" alt="P1-arbitrage" loading="lazy"></a><figcaption><span>P1-arbitrage</span><a href="assets/P1-arbitrage.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P2-sale-launch.png" download><img src="assets/P2-sale-launch.png" alt="P2-sale-launch" loading="lazy"></a><figcaption><span>P2-sale-launch</span><a href="assets/P2-sale-launch.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P3-promo-converter.png" download><img src="assets/P3-promo-converter.png" alt="P3-promo-converter" loading="lazy"></a><figcaption><span>P3-promo-converter</span><a href="assets/P3-promo-converter.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P4-sale-ends-tomorrow.png" download><img src="assets/P4-sale-ends-tomorrow.png" alt="P4-sale-ends-tomorrow" loading="lazy"></a><figcaption><span>P4-sale-ends-tomorrow</span><a href="assets/P4-sale-ends-tomorrow.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P5-sale-last-day.png" download><img src="assets/P5-sale-last-day.png" alt="P5-sale-last-day" loading="lazy"></a><figcaption><span>P5-sale-last-day</span><a href="assets/P5-sale-last-day.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P6-1-start-here.png" download><img src="assets/P6-1-start-here.png" alt="P6-1-start-here" loading="lazy"></a><figcaption><span>P6-1-start-here</span><a href="assets/P6-1-start-here.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P6-2-free-plan.png" download><img src="assets/P6-2-free-plan.png" alt="P6-2-free-plan" loading="lazy"></a><figcaption><span>P6-2-free-plan</span><a href="assets/P6-2-free-plan.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P6-3-one-tool.png" download><img src="assets/P6-3-one-tool.png" alt="P6-3-one-tool" loading="lazy"></a><figcaption><span>P6-3-one-tool</span><a href="assets/P6-3-one-tool.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P6-4-all-access.png" download><img src="assets/P6-4-all-access.png" alt="P6-4-all-access" loading="lazy"></a><figcaption><span>P6-4-all-access</span><a href="assets/P6-4-all-access.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P6-5-free-trial.png" download><img src="assets/P6-5-free-trial.png" alt="P6-5-free-trial" loading="lazy"></a><figcaption><span>P6-5-free-trial</span><a href="assets/P6-5-free-trial.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P7-live-arbitrage.png" download><img src="assets/P7-live-arbitrage.png" alt="P7-live-arbitrage" loading="lazy"></a><figcaption><span>P7-live-arbitrage</span><a href="assets/P7-live-arbitrage.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P8-no-picking.png" download><img src="assets/P8-no-picking.png" alt="P8-no-picking" loading="lazy"></a><figcaption><span>P8-no-picking</span><a href="assets/P8-no-picking.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P9-three-habits.png" download><img src="assets/P9-three-habits.png" alt="P9-three-habits" loading="lazy"></a><figcaption><span>P9-three-habits</span><a href="assets/P9-three-habits.png" download>Download</a></figcaption></figure>
-<figure class=""><a href="assets/P10-daily-card.png" download><img src="assets/P10-daily-card.png" alt="P10-daily-card" loading="lazy"></a><figcaption><span>P10-daily-card</span><a href="assets/P10-daily-card.png" download>Download</a></figcaption></figure></div></section>
-  <section class="card doc">
-    <h2>Instructions</h2>
-    <nav class="toc" aria-label="Sections"><a href="#s1">1. Create the Page</a><a href="#s2">2. Page details (copy and paste)</a><a href="#s3">3. Profile picture and cover photo</a><a href="#s4">4. Posts: schedule</a><a href="#s5">5. Posts: images and captions</a><a href="#s6">6. Pin</a><a href="#s7">7. Connect the Page to the business portfolio and the ad account, and set the button</a><a href="#s8">8. After Oct 31 (the sale ends Sat Oct 31, 11:59 pm ET)</a><a href="#s9">9. Comments and messages</a><a href="#s10">10. Needs from the owner</a><a href="#s11">What&amp;#39;s deliberately left out</a><a href="#s12">Files in this kit</a></nav>
-    <p>You&#39;ll set up the <strong>OddsBoss</strong> Facebook Page in Meta Business Suite, fill it in, schedule the first 10 posts and connect
-the Page to the ad account. Work through sections 1 to 9 in order. Everything you need to copy is in a grey box. Copy
+  <section class="step" id="start"><div class="shead"><span class="snum">!</span><h2>Before you start</h2></div><p>You&#39;ll set up the <strong>OddsBoss</strong> Facebook Page in Meta Business Suite, fill it in, publish the posts and connect
+the Page to the ad account. Work through the steps in order. Everything you need to copy is in a grey box. Copy
 it exactly. Don&#39;t change prices, dates or wording. If something doesn&#39;t match what you see, stop and ask the owner
-(section 10).</p>
+(<a href="#owner">the owner list</a>).</p>
 <ul>
 <li><strong>Images:</strong> the <code>assets/</code> folder. Upload the PNG files exactly as named here.</li>
 <li><strong>Review page:</strong> open <a href="review.html"><code>review.html</code></a> in a browser. It shows the Page on desktop and phone, plus every post with its
 caption and time.</li>
 <li><strong>Today is Thu Oct 29, 2026.</strong> A Halloween sale is running until <strong>Sat Oct 31, 11:59 pm ET</strong>. Some posts and the cover
-are for the sale only. Section 8 says exactly what to change after it ends.</li>
+are for the sale only. <a href="#step6">Step 6</a> says exactly what to change after it ends.</li>
 </ul>
 <p><strong>Time zone.</strong> Every time below is US Eastern (ET). US clocks go back one hour at 2:00 am on Sun Nov 1, so ET is
 UTC−4 until then and UTC−5 after. Each post also shows the same moment in UTC. Before you schedule, check which time
 zone the Business Suite scheduler shows. If it isn&#39;t Eastern, use the UTC time and convert it to the zone shown.</p>
 <hr>
-<h2 id="s1">1. Create the Page</h2>
-<ol>
+</section>
+  <section class="step" id="step1" data-step="1"><div class="shead"><span class="snum">1</span><h2>Create the Page</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step1"><span><b>Step done</b></span></label></span></div><ol>
 <li>Go to <strong>business.facebook.com</strong> and log in with the Facebook account the owner gave access to.</li>
 <li>Open <strong>Settings</strong> (gear icon) → <strong>Accounts</strong> → <strong>Pages</strong> → <strong>Add</strong> → <strong>Create a new Facebook Page</strong>. (If the owner
 already made the Page, choose <strong>Add a Page</strong> instead and type &quot;OddsBoss&quot;.)</li>
 <li>Page name: <code>OddsBoss</code>. Write it as one word with a capital O and B. Not &quot;Odds Boss&quot;, not &quot;Oddsboss&quot;.</li>
 <li>Category: type <code>Software</code> and pick it. Add <code>Sports</code> as a second category if Facebook offers one.</li>
-<li>Bio: paste the intro from section 2. Click <strong>Create Page</strong>.</li>
+<li>Bio: paste the intro from <a href="#step2">step 2</a>. Click <strong>Create Page</strong>.</li>
 <li>Skip &quot;connect WhatsApp&quot; and &quot;invite friends&quot;.</li>
 </ol>
-<h2 id="s2">2. Page details (copy and paste)</h2>
-<p>Open the Page → <strong>Edit details</strong> (or <strong>Settings</strong> → <strong>Page setup</strong>). Fill in every row.</p>
+</section>
+  <section class="step" id="step2" data-step="2"><div class="shead"><span class="snum">2</span><h2>Fill in the Page details</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step2"><span><b>Step done</b></span></label></span></div><p>Open the Page → <strong>Edit details</strong> (or <strong>Settings</strong> → <strong>Page setup</strong>). Fill in every row.</p>
 <table>
 <thead>
 <tr>
@@ -142,7 +195,7 @@ already made the Page, choose <strong>Add a Page</strong> instead and type &quot
 <td>Software (second category: Sports)</td>
 </tr>
 <tr>
-<td>Intro / bio (99 of the 101 characters allowed)</td>
+<td>Intro / bio (94 of the 101 characters allowed)</td>
 <td>see box A</td>
 </tr>
 <tr>
@@ -155,7 +208,7 @@ already made the Page, choose <strong>Add a Page</strong> instead and type &quot
 </tr>
 <tr>
 <td>Email</td>
-<td><code>support@getoddsboss.com</code>: <strong>leave this empty for now.</strong> Add it only once the owner confirms the mailbox works (section 10).</td>
+<td><code>support@getoddsboss.com</code>: <strong>leave this empty for now.</strong> Add it only once the owner confirms the mailbox works (<a href="#owner">the owner list</a>).</td>
 </tr>
 <tr>
 <td>Phone, address, hours</td>
@@ -163,7 +216,7 @@ already made the Page, choose <strong>Add a Page</strong> instead and type &quot
 </tr>
 <tr>
 <td>Action button</td>
-<td><strong>Sign up</strong>, link in box C (section 7)</td>
+<td><strong>Sign up</strong>, link in box C (<a href="#step5">step 5</a>)</td>
 </tr>
 <tr>
 <td>Responsible-gambling line</td>
@@ -171,23 +224,28 @@ already made the Page, choose <strong>Add a Page</strong> instead and type &quot
 </tr>
 </tbody></table>
 <p><strong>Box A: intro</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Covered whichever team wins. OddsBoss finds both sides across 17 books. 21+. Not a sportsbook.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>Covered whichever team wins. OddsBoss finds both sides across 17 books. 21+. Not a sportsbook.
 </code></pre></div>
 <p><strong>Box B: About / description</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>OddsBoss is software for US sports bettors. It finds games where two sportsbooks disagree on price, so you can back both sides and be covered whichever team wins. It scans 17 sportsbooks, exchanges and markets, pre-match and live, and works out the stake for each side. Also inside: promo conversion, middles, low holds, +EV, market moves, pro bettor signals, AI analysis, prediction markets and a bet tracker: 25 tools, ranked for your books on the Daily Card. You see both prices and both stakes before you place anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Free plan available, and 7 days free on every paid plan. Both sides only cover each other when both bets go in at the listed prices, and prices move fast. Results vary, and every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>OddsBoss is software for US sports bettors. It finds games where two sportsbooks disagree on price, so you can back both sides and be covered whichever team wins. It scans 17 sportsbooks, exchanges and markets, pre-match and live, and works out the stake for each side. Also inside: promo conversion, middles, low holds, +EV, market moves, pro bettor signals, AI analysis, prediction markets and a bet tracker: 25 tools, ranked for your books on the Daily Card. You see both prices and both stakes before you place anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Free plan available, and 7 days free on every paid plan. Both sides only cover each other when both bets go in at the listed prices, and prices move fast. Results vary, and every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 </code></pre></div>
 <p><strong>Box C: action button link</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_button
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_button
 </code></pre></div>
 <p><strong>Responsible-gambling line</strong> (for reference; it&#39;s already in boxes B, the covers and every caption):</p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 </code></pre></div>
-<h2 id="s3">3. Profile picture and cover photo</h2>
-<p><strong>Profile picture: <a class="file" href="assets/profile-A.png" download><code>assets/profile-A.png</code></a></strong> (Hank&#39;s face tile, the same mark as the site logo). Facebook shows it as a
+</section>
+  <section class="step" id="step3" data-step="3"><div class="shead"><span class="snum">3</span><h2>Profile picture and cover photo</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step3"><span><b>Step done</b></span></label></span></div><div class="ics">
+  <figure class="ic"><a href="assets/profile-A.png" download><img src="assets/profile-A.png" alt="Profile picture" loading="lazy"></a><figcaption><b>Profile picture</b><span>Use this one</span><a class="btn small" href="assets/profile-A.png" download>Download</a></figcaption></figure>
+  <figure class="ic"><a href="assets/cover-halloween.png" download><img src="assets/cover-halloween.png" alt="Cover photo: now" loading="lazy"></a><figcaption><b>Cover photo: now</b><span>Until the sale ends Sat Oct 31</span><a class="btn small" href="assets/cover-halloween.png" download>Download</a></figcaption></figure>
+  <figure class="ic"><a href="assets/cover-evergreen.png" download><img src="assets/cover-evergreen.png" alt="Cover photo: from Sun Nov 1" loading="lazy"></a><figcaption><b>Cover photo: from Sun Nov 1</b><span>Swap in step 6</span><a class="btn small" href="assets/cover-evergreen.png" download>Download</a></figcaption></figure>
+  <figure class="ic"><a href="assets/profile-B.png" download><img src="assets/profile-B.png" alt="Backup profile picture" loading="lazy"></a><figcaption><b>Backup profile picture</b><span>Only if the owner asks</span><a class="btn small" href="assets/profile-B.png" download>Download</a></figcaption></figure>
+</div><p><strong>Profile picture: <a class="file" href="assets/profile-A.png" download><code>profile-A.png</code></a></strong> (Hank&#39;s face tile, the same mark as the site logo). Facebook shows it as a
 circle: about 170 px on the Page and about 40 px next to every ad. It&#39;s built to read at 40 px. The backup option is
-<a class="file" href="assets/profile-B.png" download><code>assets/profile-B.png</code></a> (front-on face with a gold ring). Use it only if the owner asks.</p>
-<p><strong>Cover photo, from today until the sale ends: <a class="file" href="assets/cover-halloween.png" download><code>assets/cover-halloween.png</code></a>.</strong>
-<strong>From Sun Nov 1: <a class="file" href="assets/cover-evergreen.png" download><code>assets/cover-evergreen.png</code></a></strong> (section 8).</p>
+<a class="file" href="assets/profile-B.png" download><code>profile-B.png</code></a> (front-on face with a gold ring). Use it only if the owner asks.</p>
+<p><strong>Cover photo, from today until the sale ends: <a class="file" href="assets/cover-halloween.png" download><code>cover-halloween.png</code></a>.</strong>
+<strong>From Sun Nov 1: <a class="file" href="assets/cover-evergreen.png" download><code>cover-evergreen.png</code></a></strong> (<a href="#step6">step 6</a>).</p>
 <p>How to upload:</p>
 <ol>
 <li>On the Page, click the camera icon on the profile picture → <strong>Upload photo</strong> → <a class="file" href="assets/profile-A.png" download><code>profile-A.png</code></a>. Don&#39;t zoom. Click
@@ -196,10 +254,10 @@ circle: about 170 px on the Page and about 40 px next to every ad. It&#39;s buil
 <li>Click the new cover photo to open it → <strong>Edit</strong> (or &quot;Edit description&quot;) → paste box D → <strong>Save</strong>.</li>
 </ol>
 <p><strong>Box D: Halloween cover description</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>OddsBoss Halloween sale: save $100 on your first month of All-Access. 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Ends Sat Oct 31, 11:59 pm ET. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>OddsBoss Halloween sale: save $100 on your first month of All-Access. 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Ends Sat Oct 31, 11:59 pm ET. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 </code></pre></div>
-<p><strong>Box E: evergreen cover description</strong> (use it on Sun Nov 1, section 8)</p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>OddsBoss: covered whichever team wins. Find both sides across 17 books and markets, pre-match and live. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+<p><strong>Box E: evergreen cover description</strong> (use it on Sun Nov 1, <a href="#step6">step 6</a>)</p>
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>OddsBoss: covered whichever team wins. Find both sides across 17 books and markets, pre-match and live. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 </code></pre></div>
 <p><strong>Crop check on a phone (do this every time you change the cover).</strong> Open the Page in the Facebook app on a phone.
 Phones show only the middle of the cover, and the round profile picture sits over its bottom-left corner. All the words
@@ -215,272 +273,56 @@ crop any of them in Facebook&#39;s editor.</li>
 <li>Don&#39;t add filters, stickers or text in Facebook.</li>
 <li>The app screens in the images show sample data. That&#39;s why they carry a &quot;Sample data&quot; label. Leave it.</li>
 </ul>
-<h2 id="s4">4. Posts: schedule</h2>
-<p>Create each post in <strong>Business Suite → Content (or Planner) → Create post</strong>. Select only the OddsBoss Facebook Page
-(untick Instagram). Add the image(s), paste the caption <strong>exactly</strong> (the link is already inside it), then open
-<strong>Scheduling options</strong> → <strong>Schedule</strong> and set the date and time below. Post P1 and P2 today.</p>
-<p>If you finish setup after 5:00 pm ET today, publish P1 right away and P2 about 15 minutes later. Then pin P2.</p>
-<table>
-<thead>
-<tr>
-<th>#</th>
-<th>When (ET)</th>
-<th>Same time in UTC</th>
-<th>Post</th>
-<th>Images</th>
-<th>Pin?</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>P1</td>
-<td>Thu Oct 29, 5:00 pm ET</td>
-<td>2026-10-29 21:00 UTC</td>
-<td>Arbitrage: covered whichever team wins</td>
-<td><a class="file" href="assets/P1-arbitrage.png" download><code>P1-arbitrage.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P2</td>
-<td>Thu Oct 29, 7:00 pm ET</td>
-<td>2026-10-29 23:00 UTC</td>
-<td>Halloween sale: save $100 on your first month (sale)</td>
-<td><a class="file" href="assets/P2-sale-launch.png" download><code>P2-sale-launch.png</code></a></td>
-<td><strong>Pin now</strong>, until the sale ends</td>
-</tr>
-<tr>
-<td>P3</td>
-<td>Fri Oct 30, 12:00 pm ET</td>
-<td>2026-10-30 16:00 UTC</td>
-<td>Promo Converter: bonus bets, covered either way</td>
-<td><a class="file" href="assets/P3-promo-converter.png" download><code>P3-promo-converter.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P4</td>
-<td>Fri Oct 30, 7:00 pm ET</td>
-<td>2026-10-30 23:00 UTC</td>
-<td>Halloween sale ends tomorrow night (sale)</td>
-<td><a class="file" href="assets/P4-sale-ends-tomorrow.png" download><code>P4-sale-ends-tomorrow.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P5</td>
-<td>Sat Oct 31, 12:00 pm ET</td>
-<td>2026-10-31 16:00 UTC</td>
-<td>Last day: the sale ends tonight (sale)</td>
-<td><a class="file" href="assets/P5-sale-last-day.png" download><code>P5-sale-last-day.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P6</td>
-<td>Sun Nov 1, 9:00 am ET</td>
-<td>2026-11-01 14:00 UTC</td>
-<td>Start here: every plan in 5 swipes</td>
-<td><a class="file" href="assets/P6-1-start-here.png" download><code>P6-1-start-here.png</code></a>, <a class="file" href="assets/P6-2-free-plan.png" download><code>P6-2-free-plan.png</code></a>, <a class="file" href="assets/P6-3-one-tool.png" download><code>P6-3-one-tool.png</code></a>, <a class="file" href="assets/P6-4-all-access.png" download><code>P6-4-all-access.png</code></a>, <a class="file" href="assets/P6-5-free-trial.png" download><code>P6-5-free-trial.png</code></a></td>
-<td><strong>Pin on Nov 1</strong>, replaces P2</td>
-</tr>
-<tr>
-<td>P7</td>
-<td>Mon Nov 2, 12:00 pm ET</td>
-<td>2026-11-02 17:00 UTC</td>
-<td>Live Arbitrage: both sides covered while games are live</td>
-<td><a class="file" href="assets/P7-live-arbitrage.png" download><code>P7-live-arbitrage.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P8</td>
-<td>Tue Nov 3, 12:00 pm ET</td>
-<td>2026-11-03 17:00 UTC</td>
-<td>Arbitrage: no need to pick a winner</td>
-<td><a class="file" href="assets/P8-no-picking.png" download><code>P8-no-picking.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P9</td>
-<td>Wed Nov 4, 12:00 pm ET</td>
-<td>2026-11-04 17:00 UTC</td>
-<td>Covered either way: 3 habits that keep it that way</td>
-<td><a class="file" href="assets/P9-three-habits.png" download><code>P9-three-habits.png</code></a></td>
-<td></td>
-</tr>
-<tr>
-<td>P10</td>
-<td>Thu Nov 5, 12:00 pm ET</td>
-<td>2026-11-05 17:00 UTC</td>
-<td>The Daily Card: start with what&#39;s covered</td>
-<td><a class="file" href="assets/P10-daily-card.png" download><code>P10-daily-card.png</code></a></td>
-<td></td>
-</tr>
-</tbody></table>
-<p>Captions are plain text. Facebook shows the first 2 to 3 lines before &quot;See more&quot;, so the first line is the hook. Don&#39;t
-add hashtags or emojis. The link turns into a preview card by itself. If the card shows instead of your image, remove
-the card (the small x on the preview) and keep the image.</p>
-<h2 id="s5">5. Posts: images and captions</h2>
-<h3>P1 · Arbitrage: covered whichever team wins</h3>
-<p><strong>When:</strong> Thu Oct 29, 5:00 pm ET (2026-10-29 21:00 UTC)</p>
-<p><strong>Angle:</strong> Arbitrage</p>
-<p>Image: <a class="file" href="assets/P1-arbitrage.png" download><code>assets/P1-arbitrage.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P1#how</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Whichever team wins, you&#39;re covered. That&#39;s arbitrage.
+</section>
+  <section class="step" id="step4" data-step="4"><div class="shead"><span class="snum">4</span><h2>Publish the posts</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step4"><span><b>Step done</b></span></label></span></div>
+    <ol class="how">
+      <li><b>Open</b>Business Suite → Content (or Planner) → <b>Create post</b>. Tick only the OddsBoss Facebook Page (untick Instagram).</li>
+      <li><b>Add the image(s)</b>Download them from the post's card below. Multi-photo posts: all images in one post, in the numbered order.</li>
+      <li><b>Paste the caption</b>Click <b>Copy caption</b> on the card and paste it into the text box. Don't change anything. The link is already inside.</li>
+      <li><b>Publish</b>Click <b>Publish</b> (not Schedule). Then do the next card. Post them in the order shown, #1 to #8.</li>
+      <li><b>Tick the boxes</b>on the card as you go. Your ticks are saved in this browser, so you can come back later.</li>
+    </ol>
+    <div class="legend"><span class="bdg type">1 image</span> a normal photo post · <span class="bdg type multi">5 images · multi-photo post</span> one post with several images · <span class="bdg pin">Pin this post</span> pin it right after publishing · <span class="bdg sale">Sale post</span> archive it on Sun Nov 1</div>
+    <p class="note"><b>Why this order?</b> Facebook shows the newest post at the top. Posting the sale post (P2) last puts it on top, and pinning it keeps it there until the sale ends.</p>
+    <details class="ovd" open><summary>All posts at a glance</summary><ol class="ov"><li><a href="#P10"><span class="pid sm">P10</span><span class="ovw">#1 · now</span><span class="ovt">The Daily Card: start with what's covered</span><span class="ovb"><i class="bdg type">1 image</i></span></a></li><li><a href="#P9"><span class="pid sm">P9</span><span class="ovw">#2 · now</span><span class="ovt">Covered either way: 3 habits that keep it that way</span><span class="ovb"><i class="bdg type">1 image</i></span></a></li><li><a href="#P8"><span class="pid sm">P8</span><span class="ovw">#3 · now</span><span class="ovt">Arbitrage: no need to pick a winner</span><span class="ovb"><i class="bdg type">1 image</i></span></a></li><li><a href="#P7"><span class="pid sm">P7</span><span class="ovw">#4 · now</span><span class="ovt">Live Arbitrage: both sides covered while games are live</span><span class="ovb"><i class="bdg type">1 image</i></span></a></li><li><a href="#P6"><span class="pid sm">P6</span><span class="ovw">#5 · now</span><span class="ovt">Start here: every plan in 5 swipes</span><span class="ovb"><i class="bdg type multi">5 images</i></span></a></li><li><a href="#P3"><span class="pid sm">P3</span><span class="ovw">#6 · now</span><span class="ovt">Promo Converter: bonus bets, covered either way</span><span class="ovb"><i class="bdg type">1 image</i></span></a></li><li><a href="#P1"><span class="pid sm">P1</span><span class="ovw">#7 · now</span><span class="ovt">Arbitrage: covered whichever team wins</span><span class="ovb"><i class="bdg type">1 image</i></span></a></li><li><a href="#P2"><span class="pid sm">P2</span><span class="ovw">#8 · now</span><span class="ovt">Halloween sale: save $100 on your first month</span><span class="ovb"><i class="bdg type">1 image</i><i class="bdg pin">Pin</i><i class="bdg sale">Sale</i></span></a></li><li><a href="#P4"><span class="pid sm">P4</span><span class="ovw">Fri Oct 30 · 7:00 pm ET</span><span class="ovt">Halloween sale ends tomorrow night</span><span class="ovb"><i class="bdg type">1 image</i><i class="bdg sale">Sale</i></span></a></li><li><a href="#P5"><span class="pid sm">P5</span><span class="ovw">Sat Oct 31 · 12:00 pm ET</span><span class="ovt">Last day: the sale ends tonight</span><span class="ovb"><i class="bdg type">1 image</i><i class="bdg sale">Sale</i></span></a></li></ol></details>
+    <h3 class="dayh">Post now, in this order</h3><article class="post now" id="P10" data-utc="2026-11-05T17:00Z">
+  <header class="phead">
+    <span class="pid">P10</span>
+    <div class="ptitle"><h3>The Daily Card: start with what's covered</h3><div class="badges"><span class="bdg type ">1 image</span></div></div>
+    <div class="ptime"><b>Post #1</b><span>of 8, today</span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P10-daily-card.png" download><img src="assets/P10-daily-card.png" alt="P10 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P10-daily-card.png" download>Download image</a>
+       <p class="fname"><code>P10-daily-card.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>One screen, sorted by what matters most.
 
-Two sportsbooks put different prices on the same game. Back one side at each, sized right, and either result comes back ahead of what you staked.
+The OddsBoss Daily Card ranks every move for your books and your state. Moves marked Hedged cover both sides, whichever team wins: arbitrage pairs and converted promos. Start at the top and work down.
 
-Example: Book A has Over 221.5 total points at +140. Book B has the Under at −125. With $214 on the Over and $286 on the Under ($500 in total), the Over returns $513.60 and the Under returns $514.80.
+The free plan shows the Daily Card's top 3, plus a bet tracker and every calculator. No card needed. All-Access unlocks the full Daily Card.
 
-You don&#39;t need to pick a winner, follow the team, or even know the sport. OddsBoss scans 17 books and markets, pre-match and live, shows the pair as soon as it opens and works out the stake for each side.
+See today's top 3 free: https://macaroniidev.github.io/oddsboss/app/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P10#/daily
 
-Most gaps are small, usually 3% or less of the stake, and they close fast, so place both sides right away at the listed prices.
-
-See how it works: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P1#how
-
-Example only. Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P2 · Halloween sale: save $100 on your first month</h3>
-<p><strong>When:</strong> Thu Oct 29, 7:00 pm ET (2026-10-29 23:00 UTC) · <strong>Pin now. Unpin after the sale (see &quot;After Oct 31&quot;).</strong> · <strong>Sale post: archive after Oct 31</strong></p>
-<p><strong>Angle:</strong> Halloween sale (pinned until the sale ends)</p>
-<p>Image: <a class="file" href="assets/P2-sale-launch.png" download><code>assets/P2-sale-launch.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P2#plans</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Halloween sale: save $100 on your first month of OddsBoss All-Access.
-
-All-Access is every tool in one membership, including Pre-Match and Live Arbitrage: back both sides and you&#39;re covered whichever team wins. All 25 tools, pre-match and live, plus the full Daily Card, ranked for your books.
-
-How it works: start with 7 days free. Then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today. Cancel any time from your account.
-
-The sale is for the All-Access monthly plan and ends Sat Oct 31, 11:59 pm ET.
-
-Start your free trial: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P2#plans
-
-Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P3 · Promo Converter: bonus bets, covered either way</h3>
-<p><strong>When:</strong> Fri Oct 30, 12:00 pm ET (2026-10-30 16:00 UTC)</p>
-<p><strong>Angle:</strong> Promo conversion (hedged both sides)</p>
-<p>Image: <a class="file" href="assets/P3-promo-converter.png" download><code>assets/P3-promo-converter.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?h=promo&amp;utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P3</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Got bonus bets sitting in your sportsbook app? Hedge them and you&#39;re covered whichever team wins.
-
-Promo Converter ranks every promo in your state by its estimated value, then shows the matching bet on the other side at another book, sized so both results come back ahead.
-
-It&#39;s best for anyone willing to open 2+ books, start with a bankroll of $200+ and spend a couple of afternoons. Promo conversion uses offers every new customer gets, so it&#39;s the least likely to get you limited.
-
-Promo Converter is $29.99/mo, or included in both Arbitrage plans. 7 days free.
-
-See my promo options: https://macaroniidev.github.io/oddsboss/?h=promo&amp;utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P3
-
-Promos vary by state and book. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P4 · Halloween sale ends tomorrow night</h3>
-<p><strong>When:</strong> Fri Oct 30, 7:00 pm ET (2026-10-30 23:00 UTC) · <strong>Sale post: archive after Oct 31</strong></p>
-<p><strong>Angle:</strong> Halloween sale reminder</p>
-<p>Image: <a class="file" href="assets/P4-sale-ends-tomorrow.png" download><code>assets/P4-sale-ends-tomorrow.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P4#plans</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>The OddsBoss Halloween sale ends tomorrow night: Sat Oct 31, 11:59 pm ET.
-
-Start your All-Access free trial by then and save $100 on your first month: 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today.
-
-What&#39;s inside All-Access: Pre-Match and Live Arbitrage, so you&#39;re covered whichever team wins, plus all 25 tools and the full Daily Card, ranked for your books, across 17 books and markets.
-
-See the offer: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P4#plans
-
-Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P5 · Last day: the sale ends tonight</h3>
-<p><strong>When:</strong> Sat Oct 31, 12:00 pm ET (2026-10-31 16:00 UTC) · <strong>Sale post: archive after Oct 31</strong></p>
-<p><strong>Angle:</strong> Halloween sale last day</p>
-<p>Image: <a class="file" href="assets/P5-sale-last-day.png" download><code>assets/P5-sale-last-day.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P5#plans</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Last day. The OddsBoss Halloween sale ends tonight: Sat Oct 31, 11:59 pm ET.
-
-Start your All-Access free trial today: 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today. Cancel any time from your account.
-
-Not ready to pay? The free plan has the Daily Card&#39;s top 3, a bet tracker and every calculator. No card needed.
-
-Save $100 on your first month: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P5#plans
-
-Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P6 · Start here: every plan in 5 swipes</h3>
-<p><strong>When:</strong> Sun Nov 1, 9:00 am ET (2026-11-01 14:00 UTC) · <strong>Pin on Sun Nov 1, as soon as it is live (replaces P2).</strong></p>
-<p><strong>Angle:</strong> Plans + free plan (pinned after the sale)</p>
-<p>Images, upload <strong>in this order</strong> as one multi-photo post: <a class="file" href="assets/P6-1-start-here.png" download><code>assets/P6-1-start-here.png</code></a> → <a class="file" href="assets/P6-2-free-plan.png" download><code>assets/P6-2-free-plan.png</code></a> → <a class="file" href="assets/P6-3-one-tool.png" download><code>assets/P6-3-one-tool.png</code></a> → <a class="file" href="assets/P6-4-all-access.png" download><code>assets/P6-4-all-access.png</code></a> → <a class="file" href="assets/P6-5-free-trial.png" download><code>assets/P6-5-free-trial.png</code></a>. (Facebook shows organic multi-photo posts as a grid. That&#39;s expected.)</p>
-<p>Photo descriptions (optional: click each photo after upload → Edit → paste):</p>
-<ol>
-<li>25 betting tools. 17 books and markets. One membership.</li>
-<li>Free plan, $0 forever: Daily Card top 3, bet tracker with CLV, every calculator, Sportsbook Screen (delayed). No card needed.</li>
-<li>One tool? Plans from $29.99/mo.</li>
-<li>All-Access: every tool, $199.99/mo or $1,599.99/yr.</li>
-<li>Every paid plan starts with 7 days free. Card required, $0 today.</li>
-</ol>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P6#plans</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>New here? Start with this: every OddsBoss plan in 5 swipes.
-
-1. 25 betting tools, 17 books and markets, one membership.
-2. Free: $0 forever. The Daily Card&#39;s top 3, a bet tracker with CLV, every betting calculator and the Sportsbook Screen (delayed). No card needed.
-3. One tool: plans from $29.99/mo. Promo Converter $29.99, AI Picks &amp; Live Analysis $39.99, Sharp Money $79.99, Pro Bettor Signals $79.99, Pre-Match Arbitrage &amp; EV $79.99, Prediction Markets $99.99, Live Arbitrage &amp; EV $149.99.
-4. All-Access: every tool for $199.99/mo or $1,599.99/yr. That&#39;s $559.93/mo if you bought every plan separately.
-5. Every paid plan starts with 7 days free. Card required, $0 today.
-
-Find your plan: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P6#plans
-
-Free for 7 days, then your plan&#39;s price each month (or year) until you cancel. Cancel any time from your account. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P7 · Live Arbitrage: both sides covered while games are live</h3>
-<p><strong>When:</strong> Mon Nov 2, 12:00 pm ET (2026-11-02 17:00 UTC)</p>
-<p><strong>Angle:</strong> Live arbitrage</p>
-<p>Image: <a class="file" href="assets/P7-live-arbitrage.png" download><code>assets/P7-live-arbitrage.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P7#plans</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Lines move fast during games. When two books fall out of step, you can back both sides of the same bet and be covered whichever team wins.
-
-OddsBoss Live Arbitrage watches every live line at your books and shows the pair as soon as it opens, with both stakes worked out. Live lines move fast, so live gaps can be wider, and they close faster too.
-
-It&#39;s best for anyone who watches the games anyway, with 6 sportsbook accounts and a bankroll of about $5,000 spread across them.
-
-Live Arbitrage &amp; EV is $149.99/mo. It includes everything in Pre-Match Arbitrage &amp; EV, plus the live Sportsbook Screen. 7 days free.
-
-See the plans: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P7#plans
-
-Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P8 · Arbitrage: no need to pick a winner</h3>
-<p><strong>When:</strong> Tue Nov 3, 12:00 pm ET (2026-11-03 17:00 UTC)</p>
-<p><strong>Angle:</strong> Arbitrage (no picking needed)</p>
-<p>Image: <a class="file" href="assets/P8-no-picking.png" download><code>assets/P8-no-picking.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P8#how</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>You don&#39;t have to pick a winner to bet on a game.
-
-Arbitrage backs both sides at two different books. When the prices are far enough apart, the two bets together come back ahead of what you staked, whichever team wins. You don&#39;t need to follow the team, or even the sport.
-
-OddsBoss Pre-Match Arbitrage lists every pair across 17 books and markets, ranked, with the stake for each side. It takes 30 to 60 minutes a day, best in the hour before games start, and works best with about $2,000 spread over 3+ books.
-
-Pre-Match Arbitrage &amp; EV is $79.99/mo and includes Middles, Low Holds and the Promo Converter. 7 days free.
-
-See how it works: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P8#how
-
-Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P9 · Covered either way: 3 habits that keep it that way</h3>
-<p><strong>When:</strong> Wed Nov 4, 12:00 pm ET (2026-11-04 17:00 UTC)</p>
-<p><strong>Angle:</strong> How-to (trust builder)</p>
-<p>Image: <a class="file" href="assets/P9-three-habits.png" download><code>assets/P9-three-habits.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P9#how</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Arbitrage covers you whichever team wins, as long as both bets go in at the listed prices. Three habits keep it that way:
+App screens show sample data. Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P10-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P10-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P10-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P9" data-utc="2026-11-04T17:00Z">
+  <header class="phead">
+    <span class="pid">P9</span>
+    <div class="ptitle"><h3>Covered either way: 3 habits that keep it that way</h3><div class="badges"><span class="bdg type ">1 image</span></div></div>
+    <div class="ptime"><b>Post #2</b><span>of 8, today</span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P9-three-habits.png" download><img src="assets/P9-three-habits.png" alt="P9 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P9-three-habits.png" download>Download image</a>
+       <p class="fname"><code>P9-three-habits.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>Arbitrage covers you whichever team wins, as long as both bets go in at the listed prices. Three habits keep it that way:
 
 1. Place both sides right away. A gap only lasts while one book is slow to move its price.
 2. Check both stakes before you tap. OddsBoss works them out for you.
@@ -488,37 +330,246 @@ Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss
 
 See how it works: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P9#how
 
-Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<hr>
-<h3>P10 · The Daily Card: start with what&#39;s covered</h3>
-<p><strong>When:</strong> Thu Nov 5, 12:00 pm ET (2026-11-05 17:00 UTC)</p>
-<p><strong>Angle:</strong> Daily Card</p>
-<p>Image: <a class="file" href="assets/P10-daily-card.png" download><code>assets/P10-daily-card.png</code></a></p>
-<p><strong>Link inside the caption:</strong> <code>https://macaroniidev.github.io/oddsboss/app/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P10#/daily</code></p>
-<p><strong>Caption:</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>One screen, sorted by what matters most.
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P9-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P9-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P9-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P8" data-utc="2026-11-03T17:00Z">
+  <header class="phead">
+    <span class="pid">P8</span>
+    <div class="ptitle"><h3>Arbitrage: no need to pick a winner</h3><div class="badges"><span class="bdg type ">1 image</span></div></div>
+    <div class="ptime"><b>Post #3</b><span>of 8, today</span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P8-no-picking.png" download><img src="assets/P8-no-picking.png" alt="P8 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P8-no-picking.png" download>Download image</a>
+       <p class="fname"><code>P8-no-picking.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>You don't have to pick a winner to bet on a game.
 
-The OddsBoss Daily Card ranks every move for your books and your state. Moves marked Hedged cover both sides, whichever team wins: arbitrage pairs and converted promos. Start at the top and work down.
+Arbitrage backs both sides at two different books. When the prices are far enough apart, the two bets together come back ahead of what you staked, whichever team wins. You don't need to follow the team, or even the sport.
 
-The free plan shows the Daily Card&#39;s top 3, plus a bet tracker and every calculator. No card needed. All-Access unlocks the full Daily Card.
+OddsBoss Pre-Match Arbitrage lists every pair across 17 books and markets, ranked, with the stake for each side. It takes 30 to 60 minutes a day, best in the hour before games start, and works best with about $2,000 spread over 3+ books.
 
-See today&#39;s top 3 free: https://macaroniidev.github.io/oddsboss/app/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P10#/daily
+Pre-Match Arbitrage &amp; EV is $79.99/mo and includes Middles, Low Holds and the Promo Converter. 7 days free.
 
-App screens show sample data. Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
-</code></pre></div>
-<h2 id="s6">6. Pin</h2>
-<p>When P2 is live (Thu Oct 29), open it on the Page → <strong>…</strong> → <strong>Pin post</strong>. It stays pinned until the sale ends.
-Section 8 swaps it for P6. A scheduled post can&#39;t be pinned until it is live.</p>
-<h2 id="s7">7. Connect the Page to the business portfolio and the ad account, and set the button</h2>
-<ol>
+See how it works: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P8#how
+
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P8-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P8-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P8-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P7" data-utc="2026-11-02T17:00Z">
+  <header class="phead">
+    <span class="pid">P7</span>
+    <div class="ptitle"><h3>Live Arbitrage: both sides covered while games are live</h3><div class="badges"><span class="bdg type ">1 image</span></div></div>
+    <div class="ptime"><b>Post #4</b><span>of 8, today</span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P7-live-arbitrage.png" download><img src="assets/P7-live-arbitrage.png" alt="P7 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P7-live-arbitrage.png" download>Download image</a>
+       <p class="fname"><code>P7-live-arbitrage.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>Lines move fast during games. When two books fall out of step, you can back both sides of the same bet and be covered whichever team wins.
+
+OddsBoss Live Arbitrage watches every live line at your books and shows the pair as soon as it opens, with both stakes worked out. Live lines move fast, so live gaps can be wider, and they close faster too.
+
+It's best for anyone who watches the games anyway, with 6 sportsbook accounts and a bankroll of about $5,000 spread across them.
+
+Live Arbitrage &amp; EV is $149.99/mo. It includes everything in Pre-Match Arbitrage &amp; EV, plus the live Sportsbook Screen. 7 days free.
+
+See the plans: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P7#plans
+
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P7-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P7-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P7-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P6" data-utc="2026-11-01T14:00Z">
+  <header class="phead">
+    <span class="pid">P6</span>
+    <div class="ptitle"><h3>Start here: every plan in 5 swipes</h3><div class="badges"><span class="bdg type multi">5 images · multi-photo post</span></div></div>
+    <div class="ptime"><b>Post #5</b><span>of 8, today</span></div>
+  </header>
+  <p class="callout pin">📌 Don't pin it today. On Sun Nov 1 it replaces P2 as the pinned post (step 6).</p>
+  <div class="pbody">
+    <div class="media"><p class="mlabel"><b>Upload all 5 images in ONE post, in this order:</b></p>
+       <ol class="strip"><li><a href="assets/P6-1-start-here.png" download title="Download P6-1-start-here.png"><img src="assets/P6-1-start-here.png" alt="Image 1 of 5" loading="lazy"><span class="num">1</span></a><a class="dl" href="assets/P6-1-start-here.png" download>Download 1</a></li><li><a href="assets/P6-2-free-plan.png" download title="Download P6-2-free-plan.png"><img src="assets/P6-2-free-plan.png" alt="Image 2 of 5" loading="lazy"><span class="num">2</span></a><a class="dl" href="assets/P6-2-free-plan.png" download>Download 2</a></li><li><a href="assets/P6-3-one-tool.png" download title="Download P6-3-one-tool.png"><img src="assets/P6-3-one-tool.png" alt="Image 3 of 5" loading="lazy"><span class="num">3</span></a><a class="dl" href="assets/P6-3-one-tool.png" download>Download 3</a></li><li><a href="assets/P6-4-all-access.png" download title="Download P6-4-all-access.png"><img src="assets/P6-4-all-access.png" alt="Image 4 of 5" loading="lazy"><span class="num">4</span></a><a class="dl" href="assets/P6-4-all-access.png" download>Download 4</a></li><li><a href="assets/P6-5-free-trial.png" download title="Download P6-5-free-trial.png"><img src="assets/P6-5-free-trial.png" alt="Image 5 of 5" loading="lazy"><span class="num">5</span></a><a class="dl" href="assets/P6-5-free-trial.png" download>Download 5</a></li></ol>
+       <a class="btn small" href="zips/P6-all-5-images.zip" download>Download all 5 images (zip)</a>
+       <p class="hint">In Create post, click <b>Add photo/video</b> and select all 5 files at once (or add them one by one, 1 to 5). Check the order in the preview and drag to fix it. Facebook shows it as a photo grid; that's expected. <b>One caption for the whole post.</b></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>New here? Start with this: every OddsBoss plan in 5 swipes.
+
+1. 25 betting tools, 17 books and markets, one membership.
+2. Free: $0 forever. The Daily Card's top 3, a bet tracker with CLV, every betting calculator and the Sportsbook Screen (delayed). No card needed.
+3. One tool: plans from $29.99/mo. Promo Converter $29.99, AI Picks &amp; Live Analysis $39.99, Sharp Money $79.99, Pro Bettor Signals $79.99, Pre-Match Arbitrage &amp; EV $79.99, Prediction Markets $99.99, Live Arbitrage &amp; EV $149.99.
+4. All-Access: every tool for $199.99/mo or $1,599.99/yr. That's $559.93/mo if you bought every plan separately.
+5. Every paid plan starts with 7 days free. Card required, $0 today.
+
+Find your plan: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P6#plans
+
+Free for 7 days, then your plan's price each month (or year) until you cancel. Cancel any time from your account. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      <details class="pt"><summary>Optional: a description on each photo</summary>
+       <p class="hint">After the post is created, click each photo → <b>Edit</b> → paste its line.</p>
+       <div class="box mini"><div class="boxbar"><span>Photo 1</span><button class="copy" type="button">Copy</button></div><pre><code>25 betting tools. 17 books and markets. One membership.</code></pre></div><div class="box mini"><div class="boxbar"><span>Photo 2</span><button class="copy" type="button">Copy</button></div><pre><code>Free plan, $0 forever: Daily Card top 3, bet tracker with CLV, every calculator, Sportsbook Screen (delayed). No card needed.</code></pre></div><div class="box mini"><div class="boxbar"><span>Photo 3</span><button class="copy" type="button">Copy</button></div><pre><code>One tool? Plans from $29.99/mo.</code></pre></div><div class="box mini"><div class="boxbar"><span>Photo 4</span><button class="copy" type="button">Copy</button></div><pre><code>All-Access: every tool, $199.99/mo or $1,599.99/yr.</code></pre></div><div class="box mini"><div class="boxbar"><span>Photo 5</span><button class="copy" type="button">Copy</button></div><pre><code>Every paid plan starts with 7 days free. Card required, $0 today.</code></pre></div></details>
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P6-img"><span>All 5 images added, in order</span></label><label class="ck"><input type="checkbox" data-k="P6-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P6-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P3" data-utc="2026-10-30T16:00Z">
+  <header class="phead">
+    <span class="pid">P3</span>
+    <div class="ptitle"><h3>Promo Converter: bonus bets, covered either way</h3><div class="badges"><span class="bdg type ">1 image</span></div></div>
+    <div class="ptime"><b>Post #6</b><span>of 8, today</span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P3-promo-converter.png" download><img src="assets/P3-promo-converter.png" alt="P3 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P3-promo-converter.png" download>Download image</a>
+       <p class="fname"><code>P3-promo-converter.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>Got bonus bets sitting in your sportsbook app? Hedge them and you're covered whichever team wins.
+
+Promo Converter ranks every promo in your state by its estimated value, then shows the matching bet on the other side at another book, sized so both results come back ahead.
+
+It's best for anyone willing to open 2+ books, start with a bankroll of $200+ and spend a couple of afternoons. Promo conversion uses offers every new customer gets, so it's the least likely to get you limited.
+
+Promo Converter is $29.99/mo, or included in both Arbitrage plans. 7 days free.
+
+See my promo options: https://macaroniidev.github.io/oddsboss/?h=promo&amp;utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P3
+
+Promos vary by state and book. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P3-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P3-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P3-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P1" data-utc="2026-10-29T21:00Z">
+  <header class="phead">
+    <span class="pid">P1</span>
+    <div class="ptitle"><h3>Arbitrage: covered whichever team wins</h3><div class="badges"><span class="bdg type ">1 image</span></div></div>
+    <div class="ptime"><b>Post #7</b><span>of 8, today</span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P1-arbitrage.png" download><img src="assets/P1-arbitrage.png" alt="P1 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P1-arbitrage.png" download>Download image</a>
+       <p class="fname"><code>P1-arbitrage.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>Whichever team wins, you're covered. That's arbitrage.
+
+Two sportsbooks put different prices on the same game. Back one side at each, sized right, and either result comes back ahead of what you staked.
+
+Example: Book A has Over 221.5 total points at +140. Book B has the Under at −125. With $214 on the Over and $286 on the Under ($500 in total), the Over returns $513.60 and the Under returns $514.80.
+
+You don't need to pick a winner, follow the team, or even know the sport. OddsBoss scans 17 books and markets, pre-match and live, shows the pair as soon as it opens and works out the stake for each side.
+
+Most gaps are small, usually 3% or less of the stake, and they close fast, so place both sides right away at the listed prices.
+
+See how it works: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=page_launch&amp;utm_content=P1#how
+
+Example only. Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P1-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P1-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P1-pub"><span><b>Published</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post now" id="P2" data-utc="2026-10-29T23:00Z">
+  <header class="phead">
+    <span class="pid">P2</span>
+    <div class="ptitle"><h3>Halloween sale: save $100 on your first month</h3><div class="badges"><span class="bdg type ">1 image</span><span class="bdg pin">Pin this post</span><span class="bdg sale">Sale post · archive on Sun Nov 1</span></div></div>
+    <div class="ptime"><b>Post #8</b><span>of 8, today</span></div>
+  </header>
+  <p class="callout pin">📌 Pin this post right after you publish it: open it on the Page → … → Pin post. It stays pinned until the sale ends.</p>
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P2-sale-launch.png" download><img src="assets/P2-sale-launch.png" alt="P2 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P2-sale-launch.png" download>Download image</a>
+       <p class="fname"><code>P2-sale-launch.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>Halloween sale: save $100 on your first month of OddsBoss All-Access.
+
+All-Access is every tool in one membership, including Pre-Match and Live Arbitrage: back both sides and you're covered whichever team wins. All 25 tools, pre-match and live, plus the full Daily Card, ranked for your books.
+
+How it works: start with 7 days free. Then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today. Cancel any time from your account.
+
+The sale is for the All-Access monthly plan and ends Sat Oct 31, 11:59 pm ET.
+
+Start your free trial: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P2#plans
+
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P2-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P2-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P2-pub"><span><b>Published</b></span></label><label class="ck"><input type="checkbox" data-k="P2-pin"><span><b>Pinned</b> to the top of the Page</span></label></div>
+    </div>
+  </div>
+</article>
+  <h3 class="dayh later">Not today: sale reminders</h3>
+  <p class="note">These two only make sense on their day ("ends tomorrow night", "ends tonight"). Posting them today would tell people something that isn't true. <b>Schedule</b> them for the date and time on the card (Scheduling options → Schedule). If you can't schedule, publish each one on its day, or skip it.</p>
+  <article class="post" id="P4" data-utc="2026-10-30T23:00Z">
+  <header class="phead">
+    <span class="pid">P4</span>
+    <div class="ptitle"><h3>Halloween sale ends tomorrow night</h3><div class="badges"><span class="bdg type ">1 image</span><span class="bdg sale">Sale post · archive on Sun Nov 1</span><span class="bdg today" hidden>Today</span><span class="bdg late" hidden>Time passed</span></div></div>
+    <div class="ptime"><b>7:00 pm ET</b><span>Fri Oct 30</span><span class="local" data-local></span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P4-sale-ends-tomorrow.png" download><img src="assets/P4-sale-ends-tomorrow.png" alt="P4 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P4-sale-ends-tomorrow.png" download>Download image</a>
+       <p class="fname"><code>P4-sale-ends-tomorrow.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>The OddsBoss Halloween sale ends tomorrow night: Sat Oct 31, 11:59 pm ET.
+
+Start your All-Access free trial by then and save $100 on your first month: 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today.
+
+What's inside All-Access: Pre-Match and Live Arbitrage, so you're covered whichever team wins, plus all 25 tools and the full Daily Card, ranked for your books, across 17 books and markets.
+
+See the offer: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P4#plans
+
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P4-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P4-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P4-sch"><span>Scheduled for <b>Fri Oct 30, 7:00 pm ET</b></span></label></div>
+    </div>
+  </div>
+</article><article class="post" id="P5" data-utc="2026-10-31T16:00Z">
+  <header class="phead">
+    <span class="pid">P5</span>
+    <div class="ptitle"><h3>Last day: the sale ends tonight</h3><div class="badges"><span class="bdg type ">1 image</span><span class="bdg sale">Sale post · archive on Sun Nov 1</span><span class="bdg today" hidden>Today</span><span class="bdg late" hidden>Time passed</span></div></div>
+    <div class="ptime"><b>12:00 pm ET</b><span>Sat Oct 31</span><span class="local" data-local></span></div>
+  </header>
+  
+  <div class="pbody">
+    <div class="media"><a class="single" href="assets/P5-sale-last-day.png" download><img src="assets/P5-sale-last-day.png" alt="P5 image" loading="lazy"></a>
+       <a class="btn small" href="assets/P5-sale-last-day.png" download>Download image</a>
+       <p class="fname"><code>P5-sale-last-day.png</code></p></div>
+    <div class="capcol">
+      <div class="box cap"><div class="boxbar"><span>Caption: paste into the post's text box</span><button class="copy big" type="button">Copy caption</button></div><pre><code>Last day. The OddsBoss Halloween sale ends tonight: Sat Oct 31, 11:59 pm ET.
+
+Start your All-Access free trial today: 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today. Cancel any time from your account.
+
+Not ready to pay? The free plan has the Daily Card's top 3, a bet tracker and every calculator. No card needed.
+
+Save $100 on your first month: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&amp;utm_medium=organic_social&amp;utm_campaign=halloween_sale&amp;utm_content=P5#plans
+
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.</code></pre></div>
+      
+      <div class="checks"><label class="ck"><input type="checkbox" data-k="P5-img"><span>Image added</span></label><label class="ck"><input type="checkbox" data-k="P5-cap"><span>Caption pasted</span></label><label class="ck"><input type="checkbox" data-k="P5-sch"><span>Scheduled for <b>Sat Oct 31, 12:00 pm ET</b></span></label></div>
+    </div>
+  </div>
+</article>
+    <div class="doc-notes"><p>Captions are plain text. Facebook shows the first 2 to 3 lines before &quot;See more&quot;, so the first line is the hook. Don&#39;t
+add hashtags or emojis. The link turns into a preview card by itself. If the card shows instead of your image, remove
+the card (the small x on the preview) and keep the image.</p>
+<h3>Pinning</h3><p>When P2 is live (Thu Oct 29), open it on the Page → <strong>…</strong> → <strong>Pin post</strong>. It stays pinned until the sale ends.
+<a href="#step6">Step 6</a> swaps it for P6. A scheduled post can&#39;t be pinned until it is live.</p>
+</div></section>
+  <section class="step" id="step5" data-step="5"><div class="shead"><span class="snum">5</span><h2>Connect the Page to the ad account</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step5"><span><b>Step done</b></span></label></span></div><ol>
 <li><strong>Business portfolio.</strong> business.facebook.com → <strong>Settings</strong> → <strong>Accounts</strong> → <strong>Pages</strong>. OddsBoss should be listed.
 If it isn&#39;t, click <strong>Add</strong> → <strong>Add a Page</strong>, type &quot;OddsBoss&quot; and confirm. The owner&#39;s business portfolio must <em>own</em>
-the Page (not just have access). Check with the owner which portfolio that is (section 10).</li>
+the Page (not just have access). Check with the owner which portfolio that is (<a href="#owner">the owner list</a>).</li>
 <li><strong>People.</strong> Settings → <strong>Users</strong> → <strong>People</strong>: make sure the owner has <strong>full control</strong> of the Page. Add yourself
 with only the tasks you need.</li>
 <li><strong>Ad account.</strong> Settings → <strong>Accounts</strong> → <strong>Ad accounts</strong> → pick the ad account the owner uses in Ads Manager
-(section 10 gives the ID) → <strong>Connected assets</strong> (or <strong>Add assets</strong>) → <strong>Pages</strong> → tick <strong>OddsBoss</strong> → <strong>Save</strong>.</li>
+(<a href="#owner">the owner list</a> gives the ID) → <strong>Connected assets</strong> (or <strong>Add assets</strong>) → <strong>Pages</strong> → tick <strong>OddsBoss</strong> → <strong>Save</strong>.</li>
 <li><strong>Check in Ads Manager.</strong> Open Ads Manager with that ad account → create a test ad (don&#39;t publish) → at ad level,
 under <strong>Identity</strong>, the Facebook Page list must show <strong>OddsBoss</strong>. Close the draft without publishing.</li>
 <li><strong>Action button.</strong> On the Page → <strong>Add button</strong> (or <strong>Edit button</strong>) → <strong>Sign up</strong> → <strong>Website</strong> → paste box C →
@@ -530,43 +581,43 @@ authorization</strong> for this ad account (Meta Business Help Center → &quot;
 asks for the company&#39;s legal name, address, website and the US states targeted. Ads must target 21+ only. Without
 that approval, Meta rejects the ads and can restrict the account. Don&#39;t try to run or boost a post as an ad before the
 owner confirms it&#39;s approved. Meta also reviews the Page itself, so keep it exactly as this kit sets it up.</p>
-<h2 id="s8">8. After Oct 31 (the sale ends Sat Oct 31, 11:59 pm ET)</h2>
-<p>Do this as soon after the deadline as you can, and <strong>no later than Sun Nov 1, 9:00 am ET</strong> (14:00 UTC).</p>
+</section>
+  <section class="step" id="step6" data-step="6"><div class="shead"><span class="snum">6</span><h2>Sun Nov 1: switch off the sale</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step6"><span><b>Step done</b></span></label></span></div><p>Do this as soon after the deadline as you can, and <strong>no later than Sun Nov 1, 9:00 am ET</strong> (14:00 UTC).</p>
 <ol>
-<li><strong>Cover:</strong> Edit cover photo → Upload photo → <a class="file" href="assets/cover-evergreen.png" download><code>assets/cover-evergreen.png</code></a> → Save. Open it → Edit → paste box E →
-Save. Do the phone crop check again (section 3). Delete the old Halloween cover from the Cover photos album
+<li><strong>Cover:</strong> Edit cover photo → Upload photo → <a class="file" href="assets/cover-evergreen.png" download><code>cover-evergreen.png</code></a> → Save. Open it → Edit → paste box E →
+Save. Do the phone crop check again (<a href="#step3">step 3</a>). Delete the old Halloween cover from the Cover photos album
 (open it → … → Delete photo).</li>
-<li><strong>Pinned post:</strong> open P2 → … → <strong>Unpin post</strong>. When P6 is live (Sun Nov 1, 9:00 am ET), open P6 → … →
+<li><strong>Pinned post:</strong> open P2 → … → <strong>Unpin post</strong>. Then open P6 → … →
 <strong>Pin post</strong>.</li>
 <li><strong>Sale posts:</strong> for <strong>P2, P4 and P5</strong>, open each one → … → <strong>Move to archive</strong> (if Archive isn&#39;t shown, use
 <strong>Move to trash</strong>). After that, none of them should show on the Page.</li>
 <li><strong>Scheduled posts:</strong> in Business Suite → Planner, check that nothing still scheduled mentions the sale. (P6 to P10
 don&#39;t. They&#39;re evergreen.)</li>
-<li><strong>Saved replies:</strong> edit saved reply 2 (section 9) and delete its last sentence, the one about the Halloween sale.</li>
+<li><strong>Saved replies:</strong> edit saved reply 2 (<a href="#step7">step 7</a>) and delete its last sentence, the one about the Halloween sale.</li>
 <li><strong>Check the Page</strong> on a phone: evergreen cover, P6 pinned on top, and nothing on the Page says &quot;Halloween&quot;,
 &quot;$99.99 for your first month&quot; or &quot;Oct 31&quot;.</li>
 </ol>
-<h2 id="s9">9. Comments and messages</h2>
-<p>Someone must answer comments and messages within 24 hours. Set up these <strong>saved replies</strong> in Business Suite →
+</section>
+  <section class="step" id="step7" data-step="7"><div class="shead"><span class="snum">7</span><h2>Comments and messages</h2><span class="stepdone"><label class="ck"><input type="checkbox" data-k="step7"><span><b>Step done</b></span></label></span></div><p>Someone must answer comments and messages within 24 hours. Set up these <strong>saved replies</strong> in Business Suite →
 <strong>Inbox</strong> → <strong>Saved replies</strong> (the speech-bubble icon in the reply box) → <strong>Create saved reply</strong>. They come from the
 site&#39;s FAQ. Use them for comments too (reply under the comment).</p>
 <p><strong>1. &quot;Is this a sportsbook?&quot; / &quot;Do you take bets?&quot; / &quot;Is this a picks service?&quot;</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>No. OddsBoss is software, not a sportsbook or a picks service. You see both prices and both stakes before you place anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Results vary, and every bet carries risk. 21+ only.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>No. OddsBoss is software, not a sportsbook or a picks service. You see both prices and both stakes before you place anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Results vary, and every bet carries risk. 21+ only.
 </code></pre></div>
 <p><strong>2. &quot;How much is it?&quot; / &quot;Is it free?&quot;</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>There&#39;s a free plan: the Daily Card&#39;s top 3, a bet tracker and every calculator. No card needed. Paid plans start at $29.99/mo, and All-Access (every tool) is $199.99/mo or $1,599.99/yr. Every paid plan starts with 7 days free: card required, $0 today, and you can cancel any time from your account. All plans: https://macaroniidev.github.io/oddsboss/#plans Halloween sale until Sat Oct 31, 11:59 pm ET: save $100 on your first month of All-Access ($99.99 for your first month, then $199.99/mo unless you cancel).
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>There&#39;s a free plan: the Daily Card&#39;s top 3, a bet tracker and every calculator. No card needed. Paid plans start at $29.99/mo, and All-Access (every tool) is $199.99/mo or $1,599.99/yr. Every paid plan starts with 7 days free: card required, $0 today, and you can cancel any time from your account. All plans: https://macaroniidev.github.io/oddsboss/#plans Halloween sale until Sat Oct 31, 11:59 pm ET: save $100 on your first month of All-Access ($99.99 for your first month, then $199.99/mo unless you cancel).
 </code></pre></div>
 <p><strong>3. &quot;Won&#39;t the sportsbooks limit me?&quot;</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Some books will cut your max bet eventually. That&#39;s the honest answer. The fix is spreading your action: OddsBoss covers 17 books, and exchanges like Novig and ProphetX match you with other bettors, so a strong record isn&#39;t a reason to limit you. Promo conversion uses offers every new customer gets, so it&#39;s the least likely to get you limited.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>Some books will cut your max bet eventually. That&#39;s the honest answer. The fix is spreading your action: OddsBoss covers 17 books, and exchanges like Novig and ProphetX match you with other bettors, so a strong record isn&#39;t a reason to limit you. Promo conversion uses offers every new customer gets, so it&#39;s the least likely to get you limited.
 </code></pre></div>
 <p><strong>4. &quot;How big a bankroll do I need?&quot;</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>About $200 and the bonus bets already in your accounts is enough for promo conversion. Pre-match arbitrage wants about $2,000 spread over 3+ books. Live wants about $5,000 over 6. That money stays in your own sportsbook accounts the whole time.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>About $200 and the bonus bets already in your accounts is enough for promo conversion. Pre-match arbitrage wants about $2,000 spread over 3+ books. Live wants about $5,000 over 6. That money stays in your own sportsbook accounts the whole time.
 </code></pre></div>
 <p><strong>5. &quot;How do I cancel?&quot;</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Cancel from your account settings at any point during the trial. Cancel within the 7 days and you won&#39;t be charged. After the trial, your plan renews each month (or year) until you cancel, and you can cancel any time from your account.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>Cancel from your account settings at any point during the trial. Cancel within the 7 days and you won&#39;t be charged. After the trial, your plan renews each month (or year) until you cancel, and you can cancel any time from your account.
 </code></pre></div>
 <p><strong>6. Someone says they have a gambling problem (use this, then tell the owner)</strong></p>
-<div class="box"><button class="copy" type="button">Copy</button><pre><code>Thanks for telling us. If betting has stopped being fun, free, confidential help is available 24/7: call 1-800-GAMBLER. You can also set deposit limits or self-exclude in each sportsbook&#39;s app. Take care of yourself first.
+<div class="box"><div class="boxbar"><span>Copy exactly</span><button class="copy" type="button">Copy</button></div><pre><code>Thanks for telling us. If betting has stopped being fun, free, confidential help is available 24/7: call 1-800-GAMBLER. You can also set deposit limits or self-exclude in each sportsbook&#39;s app. Take care of yourself first.
 </code></pre></div>
 <p><strong>Moderation rule.</strong> Hide (don&#39;t argue with) any comment that is:</p>
 <ul>
@@ -581,16 +632,16 @@ day;</li>
 repeat spammers. If someone says they have a gambling problem, reply with saved reply 6 and tell the owner. Never
 promise anyone they&#39;ll win or make money, never say a bet is safe or certain, and never give picks in comments or DMs.
 If a question isn&#39;t covered here, answer &quot;Thanks, we&#39;ll check and get back to you&quot; and ask the owner.</p>
-<h2 id="s10">10. Needs from the owner</h2>
-<p>Ask the owner for these before or during setup. Don&#39;t guess any of them.</p>
+</section>
+  <section class="step" id="owner"><div class="shead"><span class="snum">?</span><h2>Needs from the owner</h2></div><p>Ask the owner for these before or during setup. Don&#39;t guess any of them.</p>
 <ol>
 <li><strong><a href="mailto:support@getoddsboss.com">support@getoddsboss.com</a> must exist before it goes on the Page.</strong> A registry check earlier today showed
 getoddsboss.com <strong>is not registered yet</strong>, so that address can&#39;t receive mail. The owner needs to register the
 domain, set up the mailbox and send one test email. Until they confirm, leave the Page email empty and don&#39;t publish
 the address anywhere.</li>
 <li><strong>Business portfolio and ad account.</strong> Which business portfolio should own the Page, and the <strong>ad account ID</strong> used
-in Ads Manager (section 7). Also full-control access for the owner and the right access for you.</li>
-<li><strong>Meta gambling-ad authorization</strong> for that ad account (section 7): the owner applies. It needs the company&#39;s
+in Ads Manager (<a href="#step5">step 5</a>). Also full-control access for the owner and the right access for you.</li>
+<li><strong>Meta gambling-ad authorization</strong> for that ad account (<a href="#step5">step 5</a>): the owner applies. It needs the company&#39;s
 <strong>legal name and address</strong> (the site&#39;s footer still shows &quot;[FILL: company legal name]&quot;) and the states the ads will
 target.</li>
 <li><strong>Terms and Privacy pages.</strong> The site&#39;s footer still links to &quot;[FILL: URL]&quot; for both. Meta&#39;s ad review and the
@@ -604,28 +655,65 @@ that All-Access monthly bills $99.99 for the first month and then $199.99/mo whe
 you update the website field, the button link and the links in any posts not yet published.</li>
 <li><strong>Who answers comments and DMs</strong> on weekends, and who to call about anything involving a minor or a gambling problem.</li>
 </ol>
-<h2 id="s11">What&#39;s deliberately left out</h2>
-<p>There are no member counts, testimonials, win records or &quot;results&quot;. None exist yet, and Meta&#39;s gambling-ad rules (and
+
+    <details class="more"><summary>What's deliberately left out</summary><p>There are no member counts, testimonials, win records or &quot;results&quot;. None exist yet, and Meta&#39;s gambling-ad rules (and
 US law) don&#39;t allow made-up ones. Nothing says or hints that OddsBoss takes bets, that a bet is safe, or that anyone
 will make money. The screenshots are cropped to leave out the sample profit, ROI and &quot;signal record&quot; figures in the
 app. The Halloween art is adult: lanterns, bats, a moon. It has no ghosts, no candy and nothing aimed at kids, because
 US gambling-ad rules and Meta ban anything that appeals to minors.</p>
-<h2 id="s12">Files in this kit</h2>
-<ul>
+</details>
+    <details class="more"><summary>Files in the download</summary><ul>
 <li><code>README.md</code>: this file.</li>
 <li><a href="review.html"><code>review.html</code></a>: the review page (one file, opens offline).</li>
 <li><code>assets/</code>: every image named above (18 PNGs).</li>
 </ul>
-
-  </section>
+</details></section>
 </div></main>
 <script>
-document.querySelectorAll('.copy').forEach((b) => b.addEventListener('click', async () => {
-  const text = b.nextElementSibling.innerText;
-  try { await navigator.clipboard.writeText(text); }
-  catch { const r = document.createRange(); r.selectNodeContents(b.nextElementSibling); const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy'); }
-  b.textContent = 'Copied'; b.classList.add('done'); setTimeout(() => { b.textContent = 'Copy'; b.classList.remove('done'); }, 1800);
-}));
+(function () {
+  var KEY = 'oddsboss-kit-v2', state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[data-k]'));
+  function refresh() {
+    var done = 0;
+    boxes.forEach(function (b) { if (b.checked) done++; });
+    document.getElementById('progtxt').textContent = done + ' of ' + boxes.length + ' done';
+    document.getElementById('progbar').style.width = (boxes.length ? 100 * done / boxes.length : 0) + '%';
+    document.querySelectorAll('.post').forEach(function (p) {
+      var bs = p.querySelectorAll('input[data-k]'), all = bs.length > 0;
+      bs.forEach(function (b) { if (!b.checked) all = false; });
+      p.classList.toggle('isdone', all);
+      var li = document.querySelector('.ov a[href="#' + p.id + '"]'); if (li) li.parentNode.classList.toggle('done', all);
+      var sch = p.querySelector('input[data-k$="-sch"]'), late = p.querySelector('.late');
+      if (late) late.hidden = !(Date.now() > Date.parse(p.dataset.utc) && sch && !sch.checked);
+    });
+    document.querySelectorAll('section.step[data-step]').forEach(function (s) {
+      var b = s.querySelector('input[data-k="step' + s.dataset.step + '"]'), on = b && b.checked;
+      s.classList.toggle('isdone', !!on);
+      var n = document.querySelector('nav.steps a[data-nav="' + s.id + '"]'); if (n) n.classList.toggle('done', !!on);
+    });
+  }
+  boxes.forEach(function (b) { b.checked = !!state[b.dataset.k]; b.addEventListener('change', function () { state[b.dataset.k] = b.checked; save(); refresh(); }); });
+  document.getElementById('reset').addEventListener('click', function () { if (confirm('Clear all ticks?')) { state = {}; save(); boxes.forEach(function (b) { b.checked = false; }); refresh(); } });
+  // Local time + "Today" badge
+  var etDay = function (d) { return d.toLocaleDateString('en-US', { timeZone: 'America/New_York' }); };
+  document.querySelectorAll('.post').forEach(function (p) {
+    var d = new Date(p.dataset.utc), el = p.querySelector('[data-local]');
+    try { el.textContent = 'Your time: ' + d.toLocaleString([], { weekday: 'short', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }); } catch (e) {}
+    if (etDay(d) === etDay(new Date())) p.querySelector('.today').hidden = false;
+  });
+  // Copy buttons: copy the exact text of the box
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var pre = b.closest('.box').querySelector('pre'), text = pre.textContent, label = b.textContent;
+      function ok() { b.textContent = 'Copied ✓'; b.classList.add('done'); setTimeout(function () { b.textContent = label; b.classList.remove('done'); }, 1800); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, fallback); else fallback();
+      function fallback() { var r = document.createRange(); r.selectNodeContents(pre); var s = getSelection(); s.removeAllRanges(); s.addRange(r); try { document.execCommand('copy'); ok(); } catch (e) {} }
+    });
+  });
+  refresh();
+})();
 </script>
 </body>
 </html>

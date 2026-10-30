@@ -1,6 +1,6 @@
 # OddsBoss Facebook Page: setup kit for the VA
 
-You'll set up the **OddsBoss** Facebook Page in Meta Business Suite, fill it in, schedule the first 10 posts and connect
+You'll set up the **OddsBoss** Facebook Page in Meta Business Suite, fill it in, publish the posts and connect
 the Page to the ad account. Work through sections 1 to 9 in order. Everything you need to copy is in a grey box. Copy
 it exactly. Don't change prices, dates or wording. If something doesn't match what you see, stop and ask the owner
 (section 10).
@@ -36,7 +36,7 @@ Open the Page → **Edit details** (or **Settings** → **Page setup**). Fill in
 | Page name | `OddsBoss` |
 | Username | Try `oddsboss` first. If it's taken, try `oddsbossapp`. If that's taken too, try `getoddsboss`. Use the first one that's free and tell the owner which one you got. (Type it without the @.) |
 | Category | Software (second category: Sports) |
-| Intro / bio (99 of the 101 characters allowed) | see box A |
+| Intro / bio (94 of the 101 characters allowed) | see box A |
 | About → Additional information / description | see box B |
 | Website | `https://macaroniidev.github.io/oddsboss/` |
 | Email | `support@getoddsboss.com`: **leave this empty for now.** Add it only once the owner confirms the mailbox works (section 10). |
@@ -104,6 +104,8 @@ it should look like on both.
 - The app screens in the images show sample data. That's why they carry a "Sample data" label. Leave it.
 
 ## 4. Posts: schedule
+
+**Update from the owner: publish the posts today instead of on the dates below.** Post them in this order: P10, P9, P8, P7, P6, P3, P1, then P2 last, and pin P2. P4 and P5 say "ends tomorrow" and "ends tonight", so schedule them for their dates below, or skip them. Don't pin P6 today. The kit's web page shows the same order.
 
 Create each post in **Business Suite → Content (or Planner) → Create post**. Select only the OddsBoss Facebook Page
 (untick Instagram). Add the image(s), paste the caption **exactly** (the link is already inside it), then open
@@ -433,7 +435,7 @@ Do this as soon after the deadline as you can, and **no later than Sun Nov 1, 9:
 1. **Cover:** Edit cover photo → Upload photo → `assets/cover-evergreen.png` → Save. Open it → Edit → paste box E →
    Save. Do the phone crop check again (section 3). Delete the old Halloween cover from the Cover photos album
    (open it → … → Delete photo).
-2. **Pinned post:** open P2 → … → **Unpin post**. When P6 is live (Sun Nov 1, 9:00 am ET), open P6 → … →
+2. **Pinned post:** open P2 → … → **Unpin post**. Then open P6 → … →
    **Pin post**.
 3. **Sale posts:** for **P2, P4 and P5**, open each one → … → **Move to archive** (if Archive isn't shown, use
    **Move to trash**). After that, none of them should show on the Page.
