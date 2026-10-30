@@ -46,12 +46,12 @@ Open the Page → **Edit details** (or **Settings** → **Page setup**). Fill in
 
 **Box A: intro**
 ```text
-Bet both sides. Keep the difference. Betting software for US sports bettors. 21+. Not a sportsbook.
+See where sportsbooks disagree on price. Tools for US sports bettors. 21+. Not a sportsbook.
 ```
 
 **Box B: About / description**
 ```text
-OddsBoss is betting software for US sports bettors: arbitrage, +EV, middles, low holds, promo conversion, sharp money, pro bettor signals, AI picks, live AI, prediction markets and a bet tracker. 25 tools across 17 sportsbooks, exchanges and markets, pre-match and live, ranked for your books on the Daily Card. You see both prices, both stakes and what comes back before you bet anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Free plan available, and 7 days free on every paid plan. Results vary and no bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+OddsBoss is software for US sports bettors that compares prices across 17 sportsbooks, exchanges and markets. 25 tools, pre-match and live, ranked for your books on the Daily Card: arbitrage, +EV, middles, low holds, promo conversion, market moves, pro bettor signals, AI analysis, live AI, prediction markets and a bet tracker. You see both prices and both stakes before you place anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Free plan available, and 7 days free on every paid plan. Results vary, and every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 **Box C: action button link**
@@ -86,7 +86,7 @@ OddsBoss Halloween sale: save $100 on your first month of All-Access. 7 days fre
 
 **Box E: evergreen cover description** (use it on Sun Nov 1, section 8)
 ```text
-OddsBoss: bet both sides, keep the difference. 25 betting tools for US sports bettors across 17 books and markets. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+OddsBoss: see where sportsbooks disagree on price. 25 tools for US sports bettors across 17 books and markets. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 **Crop check on a phone (do this every time you change the cover).** Open the Page in the Facebook app on a phone.
@@ -113,15 +113,15 @@ If you finish setup after 5:00 pm ET today, publish P1 right away and P2 about 1
 
 | # | When (ET) | Same time in UTC | Post | Images | Pin? |
 |---|---|---|---|---|---|
-| P1 | Thu Oct 29, 5:00 pm ET | 2026-10-29 21:00 UTC | Arbitrage: bet both sides, keep the difference | `P1-arbitrage.png` |  |
+| P1 | Thu Oct 29, 5:00 pm ET | 2026-10-29 21:00 UTC | Arbitrage: when two books disagree on price | `P1-arbitrage.png` |  |
 | P2 | Thu Oct 29, 7:00 pm ET | 2026-10-29 23:00 UTC | Halloween sale: save $100 on your first month (sale) | `P2-sale-launch.png` | **Pin now**, until the sale ends |
-| P3 | Fri Oct 30, 12:00 pm ET | 2026-10-30 16:00 UTC | Promo Converter: bonus bets into cash | `P3-promo-converter.png` |  |
+| P3 | Fri Oct 30, 12:00 pm ET | 2026-10-30 16:00 UTC | Promo Converter: get more from your bonus bets | `P3-promo-converter.png` |  |
 | P4 | Fri Oct 30, 7:00 pm ET | 2026-10-30 23:00 UTC | Halloween sale ends tomorrow night (sale) | `P4-sale-ends-tomorrow.png` |  |
 | P5 | Sat Oct 31, 12:00 pm ET | 2026-10-31 16:00 UTC | Last day: the sale ends tonight (sale) | `P5-sale-last-day.png` |  |
 | P6 | Sun Nov 1, 9:00 am ET | 2026-11-01 14:00 UTC | Start here: every plan in 5 swipes | `P6-1-start-here.png`, `P6-2-free-plan.png`, `P6-3-one-tool.png`, `P6-4-all-access.png`, `P6-5-free-trial.png` | **Pin on Nov 1**, replaces P2 |
-| P7 | Mon Nov 2, 12:00 pm ET | 2026-11-02 17:00 UTC | Positive EV: the bets with the best payouts | `P7-positive-ev.png` |  |
-| P8 | Tue Nov 3, 12:00 pm ET | 2026-11-03 17:00 UTC | Sharp Money: the pros already bet | `P8-sharp-money.png` |  |
-| P9 | Wed Nov 4, 12:00 pm ET | 2026-11-04 17:00 UTC | Prediction markets: follow consistent traders | `P9-prediction-markets.png` |  |
+| P7 | Mon Nov 2, 12:00 pm ET | 2026-11-02 17:00 UTC | Positive EV: prices better than fair odds | `P7-positive-ev.png` |  |
+| P8 | Tue Nov 3, 12:00 pm ET | 2026-11-03 17:00 UTC | Sharp Money: see where the market is moving | `P8-sharp-money.png` |  |
+| P9 | Wed Nov 4, 12:00 pm ET | 2026-11-04 17:00 UTC | Prediction markets: see the consistent traders | `P9-prediction-markets.png` |  |
 | P10 | Thu Nov 5, 12:00 pm ET | 2026-11-05 17:00 UTC | The Daily Card: every move, ranked for your books | `P10-daily-card.png` |  |
 
 Captions are plain text. Facebook shows the first 2 to 3 lines before "See more", so the first line is the hook. Don't
@@ -130,7 +130,7 @@ the card (the small x on the preview) and keep the image.
 
 ## 5. Posts: images and captions
 
-### P1 · Arbitrage: bet both sides, keep the difference
+### P1 · Arbitrage: when two books disagree on price
 
 **When:** Thu Oct 29, 5:00 pm ET (2026-10-29 21:00 UTC)
 
@@ -142,15 +142,15 @@ Image: `assets/P1-arbitrage.png`
 
 **Caption:**
 ```text
-Sportsbooks disagree on prices. That's where arbitrage comes from.
+Sportsbooks don't always agree on prices. Arbitrage is when the gap is wide enough to cover both sides.
 
-Example: Book A has Over 221.5 total points at +140. Book B has the Under at −125. Bet $214 on the Over and $286 on the Under. Whichever side hits, you get back $513.60 or $514.80 on $500, so you keep $13.60 or $14.80, if both bets are placed at these prices.
+Example: Book A has Over 221.5 total points at +140. Book B has the Under at −125. With $214 on the Over and $286 on the Under ($500 in total), the Over returns $513.60 and the Under returns $514.80, if both bets are placed at these prices.
 
-Most arbs are small: usually 3% or less of what you stake. They also disappear fast. OddsBoss scans 17 books and markets, pre-match and live, shows the pair as soon as it opens and gives you the exact bet size for each side. You don't need to follow the team, or even the sport.
+Most gaps are small, usually 3% or less of the stake, and they close fast. OddsBoss scans 17 books and markets, pre-match and live, shows the pair as soon as it opens and works out the stake for each side. You don't need to follow the team, or even the sport.
 
 See how it works: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P1#how
 
-Example only. No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Example only. Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
@@ -169,7 +169,7 @@ Image: `assets/P2-sale-launch.png`
 ```text
 Halloween sale: save $100 on your first month of OddsBoss All-Access.
 
-All-Access is every tool in one membership: all 25 tools, pre-match and live. Arbitrage, +EV, middles, low holds, promos, sharp money, pro bettor signals, AI picks, live AI and prediction markets, plus the full Daily Card, ranked for your books.
+All-Access is every tool in one membership: all 25 tools, pre-match and live. Arbitrage, +EV, middles, low holds, promos, market moves, pro bettor signals, AI analysis, live AI and prediction markets, plus the full Daily Card, ranked for your books.
 
 How it works: start with 7 days free. Then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today. Cancel any time from your account.
 
@@ -177,12 +177,12 @@ The sale is for the All-Access monthly plan and ends Sat Oct 31, 11:59 pm ET.
 
 Start your free trial: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=halloween_sale&utm_content=P2#plans
 
-No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
 
-### P3 · Promo Converter: bonus bets into cash
+### P3 · Promo Converter: get more from your bonus bets
 
 **When:** Fri Oct 30, 12:00 pm ET (2026-10-30 16:00 UTC)
 
@@ -194,15 +194,15 @@ Image: `assets/P3-promo-converter.png`
 
 **Caption:**
 ```text
-Got bonus bets sitting in your sportsbook app? You can't withdraw them. Converted, you can.
+Got bonus bets sitting in your sportsbook app? Promo Converter helps you get the most out of them.
 
-OddsBoss Promo Converter ranks every bonus in your state by the cash it converts to, then gives you the exact hedge at another book, sized for you.
+It ranks every promo in your state by its estimated value, then shows the matching hedge at another book, sized for you.
 
-It's best for anyone willing to open 2+ books, fund them with $200+ and spend a couple of afternoons. Promo conversion uses offers every new customer gets, so it's the least likely to get you limited.
+It's best for anyone willing to open 2+ books, start with a bankroll of $200+ and spend a couple of afternoons. Promo conversion uses offers every new customer gets, so it's the least likely to get you limited.
 
 Promo Converter is $29.99/mo, or included in both Arbitrage plans. 7 days free.
 
-Convert my bonus bets: https://macaroniidev.github.io/oddsboss/?h=promo&utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P3
+See my promo options: https://macaroniidev.github.io/oddsboss/?h=promo&utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P3
 
 Promos vary by state and book. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
@@ -225,11 +225,11 @@ The OddsBoss Halloween sale ends tomorrow night: Sat Oct 31, 11:59 pm ET.
 
 Start your All-Access free trial by then and save $100 on your first month: 7 days free, then $99.99 for your first month, then $199.99/mo unless you cancel. Card required, $0 today.
 
-What's inside All-Access: all 25 tools, pre-match and live. Sharp Money, Pro Bettor Signals, AI picks and Prediction Traders. The full Daily Card, ranked for your books, across 17 books and markets.
+What's inside All-Access: all 25 tools, pre-match and live. Sharp Money, Pro Bettor Signals, AI Picks and Prediction Traders. The full Daily Card, ranked for your books, across 17 books and markets.
 
 See the offer: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=halloween_sale&utm_content=P4#plans
 
-No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
@@ -254,7 +254,7 @@ Not ready to pay? The free plan has the Daily Card's top 3, a bet tracker and ev
 
 Save $100 on your first month: https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=halloween_sale&utm_content=P5#plans
 
-No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
@@ -293,7 +293,7 @@ Free for 7 days, then your plan's price each month (or year) until you cancel. C
 
 ---
 
-### P7 · Positive EV: the bets with the best payouts
+### P7 · Positive EV: prices better than fair odds
 
 **When:** Mon Nov 2, 12:00 pm ET (2026-11-02 17:00 UTC)
 
@@ -305,22 +305,22 @@ Image: `assets/P7-positive-ev.png`
 
 **Caption:**
 ```text
-Some bets pay out more than they should. Positive EV finds them.
+Sometimes a sportsbook's price is better than the fair price. Positive EV finds those spots.
 
-OddsBoss prices every bet against sharp, no-vig fair odds and ranks them by edge in real time, pre-match and live. Every bet comes with a Kelly stake, set to your bankroll.
+OddsBoss checks every price against no-vig fair odds and ranks the gaps in real time, pre-match and live. Every bet comes with a Kelly stake, set to your bankroll.
 
-The honest part: these are one-sided bets, so you will lose some. The edge shows up over hundreds of bets, not in any single one.
+The honest part: these are one-sided bets, so you will lose some. The math plays out over hundreds of bets, not in any single one.
 
-It's best for anyone willing to open 3+ sportsbook accounts, fund them with $3,000+ and put in 1+ hour a day. Positive EV is included in Pre-Match Arbitrage & EV, $79.99/mo. 7 days free.
+It's best for anyone willing to open 3+ sportsbook accounts, start with a bankroll of $3,000+ and put in 1+ hour a day. Positive EV is included in Pre-Match Arbitrage & EV, $79.99/mo. 7 days free.
 
 See Positive EV (tap the Positive EV tab): https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P7#tools
 
-No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
 
-### P8 · Sharp Money: the pros already bet
+### P8 · Sharp Money: see where the market is moving
 
 **When:** Tue Nov 3, 12:00 pm ET (2026-11-03 17:00 UTC)
 
@@ -332,22 +332,22 @@ Image: `assets/P8-sharp-money.png`
 
 **Caption:**
 ```text
-Sportsbooks limit sharp bettors. So they bet big on Novig and ProphetX, where every bet is public.
+Many experienced bettors trade on exchanges like Novig and ProphetX, where every bet is public.
 
-When volume spikes on a line there, OddsBoss Sharp Money finds the best price for the same bet at your books and tells you exactly what and how much to bet. It follows whole lines (like LeBron over 20 points), not single bettors, and works on US sportsbooks and fantasy apps.
+When volume spikes on a line there, OddsBoss Sharp Money finds the closest price for the same line at your books and suggests a stake. It follows whole lines (like LeBron over 20 points), not single bettors, and works on US sportsbooks and fantasy apps.
 
-These are one-sided bets, so you will lose some. It's best for anyone willing to open 3+ sportsbook accounts, fund them with $1,000+ and put in 1+ hour a day.
+These are one-sided bets, so you will lose some. It's best for anyone willing to open 3+ sportsbook accounts, start with a bankroll of $1,000+ and put in 1+ hour a day.
 
 Sharp Money is $79.99/mo. 7 days free.
 
-Show me the sharp money: https://macaroniidev.github.io/oddsboss/?h=sharp&utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P8
+See the market moves: https://macaroniidev.github.io/oddsboss/?h=sharp&utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P8
 
-No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
 
-### P9 · Prediction markets: follow consistent traders
+### P9 · Prediction markets: see the consistent traders
 
 **When:** Wed Nov 4, 12:00 pm ET (2026-11-04 17:00 UTC)
 
@@ -363,13 +363,13 @@ Kalshi, Polymarket, ProphetX and Novig all have traders who stay consistent. Odd
 
 Prediction Traders ranks traders on consistency. You get pre-match and live recommendations with bet sizing, deep links straight to the trade, full order book data, and exit alerts that tell you when to sell early. AI Market Picks shows model fair value vs the market price on every contract.
 
-It's best for anyone with access to Kalshi, Polymarket, ProphetX and Novig, willing to fund them with $3,000+ and put in 1+ hour a day.
+It's best for anyone with access to Kalshi, Polymarket, ProphetX and Novig, willing to start with a bankroll of $3,000+ and put in 1+ hour a day.
 
 Prediction Markets is $99.99/mo. 7 days free.
 
-Follow the traders (tap the Prediction Traders tab): https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P9#tools
+See the traders (tap the Prediction Traders tab): https://macaroniidev.github.io/oddsboss/?utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P9#tools
 
-Results vary and no trade is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+Results vary, and every trade carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 ---
@@ -386,15 +386,15 @@ Image: `assets/P10-daily-card.png`
 
 **Caption:**
 ```text
-One screen tells you what to do first.
+One screen, sorted by what matters most.
 
-The OddsBoss Daily Card ranks every arb, +EV bet, promo, sharp move, pro signal, AI pick and prediction-market trade for your books and your state. Start with the top move and work down.
+The OddsBoss Daily Card ranks every arbitrage gap, +EV price, promo, market move, pro signal, AI pick and prediction-market trade for your books and your state. Start with the top move and work down.
 
 The free plan shows the Daily Card's top 3, plus a bet tracker and every calculator. No card needed. All-Access unlocks the full Daily Card.
 
 See today's top 3 free: https://macaroniidev.github.io/oddsboss/app/?utm_source=facebook&utm_medium=organic_social&utm_campaign=page_launch&utm_content=P10#/daily
 
-App screens show sample data. No bet is guaranteed. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
+App screens show sample data. Every bet carries risk. 21+ only. Gambling problem? Call 1-800-GAMBLER. OddsBoss is software, not a sportsbook.
 ```
 
 
@@ -449,7 +449,7 @@ site's FAQ. Use them for comments too (reply under the comment).
 
 **1. "Is this a sportsbook?" / "Do you take bets?" / "Is this a picks service?"**
 ```text
-No. OddsBoss is software, not a sportsbook or a picks service. You see both prices, both stakes and what comes back before you bet anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Results vary and no bet is guaranteed. 21+ only.
+No. OddsBoss is software, not a sportsbook or a picks service. You see both prices and both stakes before you place anything, and you place every bet yourself, at your own books, with your own money. We never take bets or hold your money. Results vary, and every bet carries risk. 21+ only.
 ```
 
 **2. "How much is it?" / "Is it free?"**
@@ -459,10 +459,10 @@ There's a free plan: the Daily Card's top 3, a bet tracker and every calculator.
 
 **3. "Won't the sportsbooks limit me?"**
 ```text
-Some books will cut your max bet eventually. That's the honest answer. The fix is spreading your action: OddsBoss covers 17 books, and exchanges like Novig and ProphetX match you with other bettors, so winning isn't a reason to limit you. Promo conversion uses offers every new customer gets, so it's the least likely to get you limited.
+Some books will cut your max bet eventually. That's the honest answer. The fix is spreading your action: OddsBoss covers 17 books, and exchanges like Novig and ProphetX match you with other bettors, so a strong record isn't a reason to limit you. Promo conversion uses offers every new customer gets, so it's the least likely to get you limited.
 ```
 
-**4. "How much money do I need?"**
+**4. "How big a bankroll do I need?"**
 ```text
 About $200 and the bonus bets already in your accounts is enough for promo conversion. Pre-match arbitrage wants about $2,000 spread over 3+ books. Live wants about $5,000 over 6. That money stays in your own sportsbook accounts the whole time.
 ```
